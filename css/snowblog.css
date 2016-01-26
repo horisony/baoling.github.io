@@ -223,6 +223,7 @@ pre code {
 	 * Since V1.6 we use absolute positioning to prevent to expand container-fluid
 	 * which would cover tags. A absolute positioning make a new layer.
 	 */
+
   .navbar-default .navbar-collapse {
     position: absolute;
     right: 0;
@@ -990,6 +991,8 @@ img::-moz-selection {
   padding:0;
   position:relative;
   margin-bottom: 16px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
 }
 .port-img
 {
@@ -1006,4 +1009,54 @@ img::-moz-selection {
   color:white;
   padding:20px;
   position:absolute;
+}
+.footer-my
+{
+  background-color: grey;
+  text-align: center;
+  font-size: 1em;
+  color:white;
+  border-top: 1px solid grey;
+  height:80px;
+}
+
+@media only screen and (min-width:1171px) {
+    .row-my{ width:1170px;margin:0 auto; text-align: center;background-color: yellow;}
+  
+}
+@media only screen and (max-width: 1170px){
+    .row-my{ width:100%;margin:0 auto; text-align: center;background-color: yellow;}
+  
+}
+
+
+@media only screen and (min-width:768px) {
+.each-port
+{
+  display:inline-block;
+  width:364px;
+  height:300px;
+  background-color: red;
+  margin:0 5px 10px 5px;
+}
+}
+@media only screen and (min-width:321px) and (max-width:767px) {
+.each-port
+{
+  display:inline-block;
+  width:291px;
+  height:240px;
+  background-color: red;
+  margin:1px 5px 1px 5px;
+}
+}
+@media only screen and (max-width:320px) {
+.each-port
+{
+  display:inline-block;
+  width:100%;
+  height:240px;
+  background-color: red;
+  margin:1px 0px 1px 0px;
+}
 }
