@@ -1025,17 +1025,23 @@ img::-moz-selection {
 }
 
 @media only screen and (min-width:1171px) {
-    .row-my{ width:1170px;margin:0 auto; text-align: center;background-color: yellow;padding-top: 20px;}
+    .row-my{ width:1170px;margin:0 auto; text-align: center;/*background-color: yellow;*/padding: 20px 0;}
     .row{margin:0 auto; text-align: center;}
 }
 @media only screen and (min-width: 768px) and (max-width: 1170px){
-    .row-my{ width:767px;margin:0 auto; text-align: center;background-color: yellow;padding-top: 20px;}
+    .row-my{ width:767px;margin:0 auto; text-align: center;/*background-color: yellow;*/padding: 20px 0;}
     .row{margin:0 auto; text-align: center;}
 }
 @media only screen and (max-width: 767px){
-    .row-my{ width:100%;margin:0 auto; text-align: center;background-color: yellow;padding-top: 8px;}
+    .row-my{ width:100%;margin:0 auto; text-align: center;/*background-color: yellow;*/padding: 8px 0;}
     .row{margin:0 auto; text-align: center;}
 }
+.col-md-4-my
+{
+  box-shadow: 0 1px 6px #c5d4da;
+  margin:0 2px;
+}
+
 
 @media only screen and (min-width:1171px) {
 .each-port
