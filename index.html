@@ -27,7 +27,9 @@
         })();
     </script>
     <script type="text/javascript">
-    document.ontouchmove = function(e){ e.preventDefault(); }; //文档禁止 touchmove事件
+    document.body.addEventListener('touchmove', function(e) {
+    e.stopPropagation();
+    e.preventDefault();
     });
     </script>
     <script type="text/javascript" async="" src="js/embed.js" charset="UTF-8"></script>
@@ -152,12 +154,48 @@
 
 <div class="content-my">
     <div class="row-my">
-        <a href=""><div class="col-md-4-my"></div></a>
-        <a href=""><div class="col-md-4-my"></div></a>
-        <a href=""><div class="col-md-4-my"></div></a>
-        <a href=""><div class="col-md-4-my"></div></a>
-        <a href=""><div class="col-md-4-my"></div></a>
-        <a href=""><div class="col-md-4-my"></div></a>
+        <a href="">
+            <div class="col-md-4-my" style="background-image:url(img/portfolio-bg.png)">
+                <div class="port-text">
+                    portfolio1
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="col-md-4-my" style="background-image:url(img/portfolio-bg.png)">
+                <div class="port-text">
+                    portfolio2
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="col-md-4-my" style="background-image:url(img/portfolio-bg.png)">
+                <div class="port-text">
+                    portfolio3
+                </div>
+            </div>
+        </a>   
+        <a href="">
+            <div class="col-md-4-my" style="background-image:url(img/portfolio-bg.png)">
+                <div class="port-text">
+                    portfolio4
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="col-md-4-my" style="background-image:url(img/portfolio-bg.png)">
+                <div class="port-text">
+                    portfolio5
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="col-md-4-my" style="background-image:url(img/portfolio-bg.png)">
+                <div class="port-text">
+                    portfolio6
+                </div>
+            </div>
+        </a>     
         <!-- <a href=""><div class="each-port"></div></a>
         <a href=""><div class="each-port"></div></a>
         <a href=""><div class="each-port"></div></a>
