@@ -1016,11 +1016,11 @@ img::-moz-selection {
 }
 .footer-my
 {
-  background-color: grey;
+  background-color:#e8efef;
   text-align: center;
-  font-size: 1em;
-  color:white;
-  border-top: 1px solid grey;
+  font-size: .8em;
+  color:#888;
+  border-top: 1px solid #d4d4d4;
   height:80px;
 }
 
