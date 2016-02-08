@@ -26,6 +26,12 @@
           s.parentNode.insertBefore(hm, s);
         })();
     </script>
+    <script type="text/javascript">
+    document.body.addEventListener('touchmove', function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    });
+    </script>
     <script type="text/javascript" async="" src="js/embed.js" charset="UTF-8"></script>
     <script async="" src="js/analytics.js"></script>
     <script src="js/fastclick.min.js"></script>
