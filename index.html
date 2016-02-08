@@ -27,9 +27,7 @@
         })();
     </script>
     <script type="text/javascript">
-    document.body.addEventListener('touchmove', function(e) {
-    e.stopPropagation();
-    e.preventDefault();
+    document.ontouchmove = function(e){ e.preventDefault(); }; //文档禁止 touchmove事件
     });
     </script>
     <script type="text/javascript" async="" src="js/embed.js" charset="UTF-8"></script>
