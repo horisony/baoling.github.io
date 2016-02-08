@@ -1036,11 +1036,15 @@ img::-moz-selection {
     .row-my{ width:100%;margin:0 auto; text-align: center;/*background-color: yellow;*/padding: 8px 0;}
     .row{margin:0 auto; text-align: center;}
 }
-.col-md-4-my
+div.col-md-4-my
 {
   box-shadow: 0 1px 6px #c5d4da;
   margin:0 2px;
   position:relative;
+}
+div.col-md-4-my:hover
+{
+  box-shadow: 0 1px 12px #2495f4;
 }
 .port-text
 {
