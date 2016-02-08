@@ -1010,6 +1010,10 @@ img::-moz-selection {
   padding:20px;
   position:absolute;
 }
+.content-my
+{
+  background-color: #e8efef;
+}
 .footer-my
 {
   background-color: grey;
