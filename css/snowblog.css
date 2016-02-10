@@ -6,11 +6,10 @@
 }*/
 .navbar-inpage
 {
-  height:56px;
+  height:50px;
   width:100%;
   background-color: rgba(255,255,255,0.9);
-  line-height: 56px;
-  font-size: 3.1em;
+  font-size: 2.6em;
   padding:0 18px; 
   color:#333;
   position:fixed;
@@ -18,13 +17,15 @@
 }
 .headertext-inpage
 {
-  font-size: .5em;
+  font-size: .45em;
   text-align: center;
+  line-height: 50px;
 }
 
 span.icon-back_arrow_line
 {
   float:left;
+  line-height: 50px;
 }
 @media (min-width: 1200px) {
   .post-container,
