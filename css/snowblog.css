@@ -1029,7 +1029,7 @@ img::-moz-selection {
 
 @media only screen and (min-width:1171px) {
     .row-my{ width:1170px;margin:0 auto; text-align: center;/*background-color: yellow;*/padding: 20px 0;}
-    .row-my-inpage{ width:1170px;margin:0 auto; text-align: center;background-color:white;padding: 20px 0;}
+    .row-my-inpage{ /*z-index:9;position:absolute;top:370px;*/width:1170px;margin:0 auto; text-align: left;background-color:white;padding: 20px 20px;}
     .row{margin:0 auto; text-align: center;}
     .col-md-4-my
   {
@@ -1062,7 +1062,7 @@ img::-moz-selection {
 }
 @media only screen and (min-width: 768px) and (max-width: 1170px){
     .row-my{ width:767px;margin:0 auto; text-align: center;/*background-color: yellow;*/padding: 20px 0;}
-    .row-my-inpage{ z-index:9;top:-40px;width:767px;margin:0 auto; text-align: center;background-color:white;padding: 20px 0;}
+    .row-my-inpage{/* z-index:9;position:absolute;top:370px;*/width:767px;margin:0 auto; text-align: left;background-color:white;padding: 20px 20px;}
     .row{margin:0 auto; text-align: center;}
     .col-md-4-my
   {
@@ -1095,7 +1095,7 @@ img::-moz-selection {
 }
 @media only screen and (max-width: 767px){
     .row-my{ width:100%;margin:0 auto; text-align: center;/*background-color: yellow;*/padding: 8px 0;}
-    .row-my-inpage{ width:100%;margin:0 auto; text-align: center;background-color:white;padding: 8px 0;}
+    .row-my-inpage{ /*z-index:9;position:absolute;top:380px;*/width:100%;margin:0 auto; text-align:left;background-color:white;padding: 12px 16px;}
     .row{margin:0 auto; text-align: center;}
     .col-md-4-my
   {
