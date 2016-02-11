@@ -1149,6 +1149,26 @@ div.col-md-4-my:hover, div.col-md-4-my:active
   width:100%;
   height:100%;
 }
+.to-top
+{
+  width:50px;
+  height:50px;
+  border-radius:25px;  
+  border:1px solid #ccc;
+  background-color: white;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  box-shadow: 0 0 12px #666;
+  line-height: 50px;
+  text-align: center;
+  color:#666;
+}
+a.to-top:hover/*div.to-top:active*/
+{
+  background-color: #ddd;
+  color:#666;
+}
 
 @media only screen and (min-width:1171px) {
   /*.each-port
