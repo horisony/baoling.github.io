@@ -1047,6 +1047,7 @@ img::-moz-selection {
   color:#333;
   position:fixed;
   z-index:5;
+  border-bottom: 1px solid #ddd;
   }
   .headertext-inpage
   {
@@ -1080,6 +1081,7 @@ img::-moz-selection {
   color:#333;
   position:fixed;
   z-index:5;
+  border-bottom: 1px solid #ddd;
   }
   .headertext-inpage
   {
@@ -1113,6 +1115,7 @@ img::-moz-selection {
   color:#333;
   position:fixed;
   z-index:5;
+  border-bottom: 1px solid #ddd;
   }
   .headertext-inpage
   {
@@ -1164,9 +1167,14 @@ div.col-md-4-my:hover, div.col-md-4-my:active
   text-align: center;
   color:#666;
 }
-a.to-top:hover/*div.to-top:active*/
+a.to-top:link,a.to-top:visited
 {
-  background-color: #ddd;
+  background-color: white;
+  color:#666;
+}
+a.to-top:hover/*,div.to-top:active*/
+{
+  background-color: red;
   color:#666;
 }
 
