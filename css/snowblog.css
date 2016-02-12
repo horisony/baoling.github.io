@@ -1174,7 +1174,7 @@ a.to-top:link,a.to-top:visited
 }
 a.to-top:hover/*,div.to-top:active*/
 {
-  background-color: red;
+  background-color: #ddd;
   color:#666;
 }
 
