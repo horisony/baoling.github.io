@@ -1162,6 +1162,8 @@ div.col-md-4-my:hover, div.col-md-4-my:active
 {
   width:100%;
   height:100%;
+  /*text-align:center;*/
+  margin:0 auto;
 }
 .img-inpage2
 {
@@ -1202,7 +1204,6 @@ div.img-inpage2:hover
   background-color:#30bf71;
   
 }
-
 
 .other-header
 {
@@ -1266,6 +1267,15 @@ a.to-top:hover/*,div.to-top:active*/
 {
   box-shadow: 0 1px 12px #2495f4;
   border:1px solid #0079be;
+}
+.other-header a
+{
+  color:#4444ff;
+  text-decoration: underline;
+}
+.other-header a:hover
+{
+  color:#1111ee;
 }
 
 @media only screen and (min-width:1171px) {
