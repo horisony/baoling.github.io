@@ -1021,10 +1021,19 @@ img::-moz-selection {
 {
   background-color:#e8efef;
   text-align: center;
-  font-size: .8em;
+  font-size: .9em;
   color:#888;
   border-top: 1px solid #d4d4d4;
   height:80px;
+  line-height: 10px;
+}
+.footer-my ul li
+{
+  font-size: 1.2em;
+  padding:0;
+}
+.footer-my ul{
+  -webkit-padding-start: 0px;
 }
 
 @media only screen and (min-width:1171px) {
@@ -1060,6 +1069,7 @@ img::-moz-selection {
   float:left;
   line-height: 50px;
   }
+
 }
 @media only screen and (min-width: 768px) and (max-width: 1170px){
     .row-my{ width:767px;margin:0 auto; text-align: center;/*background-color: yellow;*/padding: 20px 0;}
@@ -1090,10 +1100,11 @@ img::-moz-selection {
   line-height: 50px;
   }
   span.icon-back_arrow_line
-{
+  {
   float:left;
   line-height: 50px;
-}
+  }
+  
 }
 @media only screen and (max-width: 767px){
     .row-my{ width:100%;margin:0 auto; text-align: center;/*background-color: yellow;*/padding: 8px 0;}
@@ -1191,31 +1202,17 @@ div.img-inpage2:hover
   background-color:#30bf71;
   
 }
-.last-post
-{
-  padding:10px 10px;
-  border:1px solid #ddd;
-  background-color: #eee;
-  color:#333;
-  float:left;
-  margin-bottom: 15px;
-  vertical-align: middle;
-}
-.next-post
-{
-  padding:10px 10px;
-  border:1px solid #ddd;
-  background-color: #eee;
-  color:#333;
-  float:right;
-  margin-bottom: 15px;
-}
-.last-post-arrow
-{
-  font-size: 4em;
-  line-height: 240px;
-  vertical-align: middle;
 
+
+.other-header
+{
+  font-size: 1.2em;
+  padding:10px 8px 8px 8px;
+}
+
+.icon-back_arrow_line
+{
+  vertical-align: middle;
 }
 .f-left
 {
@@ -1250,6 +1247,20 @@ a.to-top:hover/*,div.to-top:active*/
   background-color: #ddd;
   color:#666;
 }
+.other-post-bg
+{
+  padding:5px 5px;
+  background-color: rgba(0,0,0,0.7);
+  color:white;
+  width:100%;
+  position: absolute;
+  bottom:0;
+}
+.other-post:hover
+{
+  box-shadow: 0 1px 12px #2495f4;
+  border:1px solid #0079be;
+}
 
 @media only screen and (min-width:1171px) {
   /*.each-port
@@ -1267,6 +1278,25 @@ a.to-top:hover/*,div.to-top:active*/
   height:280px;
   background-color: white;
   }
+  .other-posts
+  {
+  width:100%;
+  height:260px;
+  /*background-color: yellow;*/
+  
+  vertical-align: middle;
+  }
+  .other-post
+  {
+  width:32%;
+  height:180px;
+  float:left;
+  margin:0px 5px 5px 5px;
+  border:1px solid #ccc;
+  box-shadow: 0 0 2px #ccc;
+  position:relative;
+  }
+
 }
 
 @media only screen and (min-width:768px) and (max-width:1170px) {
@@ -1285,6 +1315,24 @@ a.to-top:hover/*,div.to-top:active*/
   height:280px;
   background-color: white;
   }
+  .other-posts
+  {
+  width:100%;
+  height:260px;
+  /*background-color: yellow;*/
+  
+  vertical-align: middle;
+  }
+  .other-post
+  {
+  width:32%;
+  height:180px;
+  float:left;
+  margin:0px 4px 5px 4px;
+  border:1px solid #ccc;
+  box-shadow: 0 0 2px #ccc;
+  position:relative;
+  }
 }
 @media only screen and (max-width:767px)and (min-width: 441px){
   /*.each-port
@@ -1301,6 +1349,25 @@ a.to-top:hover/*,div.to-top:active*/
   width:49%;
   height:220px;
   background-color: white;
+  }
+  .other-posts
+  {
+  width:100%;
+  height:100%;
+  /*background-color: yellow;*/
+  
+  vertical-align: middle;
+  }
+  .other-post
+  {
+  width:400px;
+  height:180px;
+  /*float:left;*/
+  margin:0px auto 8px auto;
+  border:1px solid #ccc;
+  box-shadow: 0 0 2px #ccc;
+  position:relative;
+
   }
 }
 
@@ -1319,5 +1386,24 @@ a.to-top:hover/*,div.to-top:active*/
   width:100%;
   height:220px;
   background-color: white;
+  }
+  .other-posts
+  {
+  width:100%;
+  height:100%;
+  /*background-color: yellow;*/
+  
+  vertical-align: middle;
+  }
+  .other-post
+  {
+  width:100%;
+  height:180px;
+  /*float:left;*/
+  margin:0px 0px 5px 0px;
+  border:1px solid #ccc;
+  box-shadow: 0 0 2px #ccc;
+  position:relative;
+
   }
 }
