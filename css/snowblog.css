@@ -1237,7 +1237,12 @@ div.img-inpage2:hover
   text-align: center;
   color:#666;
   padding-top:5px;
+  /*margin:0 auto;*/
 }
+span{
+  text-align: center;
+}
+
 a.to-top:link,a.to-top:visited
 {
   background-color: white;
