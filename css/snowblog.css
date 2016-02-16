@@ -1041,6 +1041,33 @@ img::-moz-selection {
 .footer-my ul{
   -webkit-padding-start: 0px;
 }
+.link-img
+{
+  width:40px;
+  height:40px;
+  border-radius: 20px;
+  color:white;
+  font-size:1em;
+  text-align: center;
+  line-height: 40px;
+  background-color: #999;
+  margin-right: 18px;
+}
+div.lofter:hover
+{
+  background-color: #336162;
+}
+
+div.zhihu:hover
+{
+  background-color: #1992f5;
+}
+
+div.github:hover
+{
+  background-color: #201d1e;
+}
+
 
 @media only screen and (min-width:1171px) {
     .row-my{ width:1170px;margin:0 auto; text-align: center;/*background-color: yellow;*/padding: 20px 0;}
@@ -1077,8 +1104,8 @@ img::-moz-selection {
   }
   .me-img
   {
-    width:200px;
-    height:200px;
+    width:180px;
+    height:180px;
   }
   
   .left-bar
