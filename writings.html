@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type"  content="text/html; charset=utf-8">  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Copatible" content="IE=edge">
+    <meta name="viewport"  content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <title>About - Snow's blog</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/snowblog.css">
+    <link rel="stylesheet" type="text/css" href="css/snowblog.min.css">
+      
+    <script src="js/jquery.min.js" ></script>
+    <script src="js/bootstrap.min.js" ></script>
+    <script src="js/highlight.min.js"></script>
+    <script src="js/hm.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?4cc1f2d8f3067386cc5cdb626a202900";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript">
+    document.body.addEventListener('touchmove', function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    });
+    </script>
+    <script type="text/javascript" async="" src="js/embed.js" charset="UTF-8"></script>
+    <script async="" src="js/analytics.js"></script>
+    <script src="js/fastclick.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/embed.default.css">
+
+</head>
+
+<body>
+    
+<!-- navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Snow's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- <li>
+                    <a href="./Hux Blog_files/Hux Blog.html">Home</a>
+                </li> -->
+                
+                <li>
+                    <a href="index.html">Portfolio</a>
+                </li>
+                
+                <li>
+                    <a href="writings.html">Writings</a>
+                </li>
+                
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                
+
+                <!-- Hux customized -->
+
+
+                <!-- Hux end -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Stop 'touchstart' from $collapse propagating to document 
+     */
+    $collapse.addEventListener('touchstart', function(e){
+        e.stopPropagation();
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     */
+    document.addEventListener('touchstart', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+<!-- page header -->
+<header class="intro-header" style="background-image:url(img/header-bg/writings.png)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <!-- <h1>About</h1> -->
+                    <h1>Writings</h1>
+                    <!--<hr class="small">-->
+                    <span class="subheading">Snow, ux designer</span>
+                </div>
+            </div>
+        </div>
+    </div>            
+</header>
+
+
+<div class="content-my" >
+    <div class="row-my-inpage">
+        <div class="post-preview">
+            <a target="_blank" href="https://www.zhihu.com/question/27351776/answer/84912282">
+                <h2 class="post-title">            
+                    <del>微信</del>iOS设计的神细节有哪些？
+                </h2>        
+                      
+                <div class="post-content-preview1">
+                    图上的红色划线的文字是调节视频的速度，而蓝色或白色的色团是我手指所在的位置。我是先点击滚动条上的调节点，然后手指不离开屏幕滑动到这个位置的。在滑动到色团所在的位置之后，再进行左右滑动，依然可以调节视频的进退，不同的是，视频的调节速度并不和手指移动的速度一样快。而是根据手指距离视频调节点的垂直距离来分的，距离越远，则视频调节速度比手指移动速度越慢。这就是为了更精确地控制视频的播放进度。
+                </div>
+            </a>
+            <p class="post-meta">Posted by Snow on October 11, 2015</p>
+        
+        </div>
+        <hr>
+
+
+        <div class="post-preview">
+            <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDQ1Njc3NQ==&mid=402529271&idx=1&sn=2cf44bc6421be1be4325ab791df24494#rd">
+                <h2 class="post-title">            
+                    Inline editing可以怎么玩
+                </h2>        
+                      
+                <div class="post-content-preview1">
+                    在Moody's Analytics这样一个数据导向的公司，会碰到各式各样的表格，涉及到许多对表格的编辑、保存、过滤、搜索等操作，本文介绍几种编辑和保存的模式，下一篇将讲过滤和搜索。
+
+"Inline editing" 从字面上看上去第一眼会以为是在一行中做编辑，其实 “Inline” 是 “内联的” 的意思，指的是在原页面进行编辑和保存，而不是跳到另一个页面进行编辑。相比于另起一个页面进行编辑的形式，Inline editing更符合用户的直觉，更不容易迷失。
+                </div>
+            </a>
+            <p class="post-meta">Posted by Snow on December 13, 2015</p>
+        
+        </div>
+        <hr>
+
+        <div class="post-preview">
+            <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDQ1Njc3NQ==&mid=401582859&idx=1&sn=f71be84d479f53efcae5da158fb2ef6b&scene=20#rd">
+                <h2 class="post-title">            
+                    Auto Save案例和情景分析
+                </h2>        
+                      
+                <div class="post-content-preview1">
+                    最近开始在深圳穆迪评级（Moody’s ）实习，做ux designer的工作。不做金融的同学可能不了解这家公司，穆迪是美国三大信用评级机构之一，主要工作就是对公司进行信用评级以帮助银行确定该公司可贷款额度。
+
+我目前的工作是协助设计师对RiskOrigins 4.0系统进行改进升级，做5.0的版本。这是一个给银行使用的审批贷款的系统，其中涉及到很多数据的输入、保存，任务的发起、分配、完成等，需要随时保存数据以防止突然断电，电脑死机等突发情况导致的填写内容被清空。
+                </div>
+            </a>
+            <p class="post-meta">Posted by Snow on November 25, 2015</p>
+        
+        </div>
+        <hr>
+
+        <div class="post-preview">
+            <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDQ1Njc3NQ==&mid=403832365&idx=1&sn=f7be1469c85ba5f00db95426073ca8d5#rd">
+                <h2 class="post-title">            
+                    未来购物方式的思考
+                </h2>
+        
+                <!-- <h3 class="post-subtitle">
+                    ES5, ES6, ES2016, ES.Next: What's going on with JavaScript versioning?
+                </h3> -->
+        
+                <div class="post-content-preview1">
+                    前言：前几天在网上买衣服，花了一个晚上时间。引发我思考，网上判断一件衣服质量和合适程度有多难。线下选购衣服，用户调动了：视觉、触觉、嗅觉、听觉四大感官体验。而线上选购衣服最多只能调动：视觉。而且是静态的视觉图，比起线下的360°无死角的视觉又缺少了大量信息。判断一件衣服的质量和合适与否，线下只需5分钟就几乎能百分之百确定，而线上，哪怕花一个小时看图片、看评论、看商品详情，都无法百分百确定这件衣服质量如何、合适与否。
+                </div>
+            </a>
+            <p class="post-meta">Posted by Snow on January 22, 2016</p>
+        
+        </div>
+        <hr>
+
+        <div class="post-preview">
+            <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDQ1Njc3NQ==&mid=403349534&idx=1&sn=07822b78ab0ff809a24238c43b818b98#rd">
+                <h2 class="post-title">            
+                    Twitter的搜索设计，23种潜藏的高级搜索「译」
+                </h2>        
+                      
+                <div class="post-content-preview1">
+                    最近在设计公司产品的搜索框，对一些产品的搜索模式进行了调研。在Medium上找到一篇关于Twitter搜索的文章，觉得很好，现在翻译出来分享给大家。每秒钟平均有6000条推文被发到twitter上，平均每天就有5亿条推文！你知道你可以搜索这么多推文中的每一条吗？Twitter有很多超级棒但是鲜为人知的高级搜索技巧，可以帮助你找到你想要的内容。
+                </div>
+            </a>
+            <p class="post-meta">Posted by Snow on December 30, 2015</p>
+        
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+            <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDQ1Njc3NQ==&mid=403704863&idx=1&sn=36afbeb5741846d9199cb23b9b1389fe#rd">
+                <h2 class="post-title">            
+                    Lofter redesign
+                </h2>        
+                      
+                <div class="post-content-preview1">
+                    从14年底开始使用Lofter，一直把它用来存放和展示自己的作品集，凭借这份在线作品集在14年底拿到了实习offer，所以之后一直把Lofter链接放在简历里，作为自己pdf版作品集的补充，补充展示我的写作和思考，以及动效制作能力。虽然Lofter一直不温不火，但我依然用着它，主要出自以下原因：
+                </div>
+            </a>
+            <p class="post-meta">Posted by Snow on January 12, 2016</p>
+        
+        </div>
+        <hr>
+
+        <div class="post-preview">
+            <a target="_blank" href="http://www.jianshu.com/p/857c946afcdf">
+                <h2 class="post-title">            
+                    【淘宝二手】闲鱼app体验报告
+                </h2>        
+                      
+                <div class="post-content-preview1">
+                    纯ppt导成的图片，为方便看大图，导向我的简书
+                </div>
+            </a>
+            <p class="post-meta">Posted by Snow on August 31, 2015</p>
+        
+        </div>
+        <hr>
+
+        <div class="post-preview">
+            <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDQ1Njc3NQ==&mid=401087318&idx=1&sn=9d8adeabf229e3751c7ef4a75bcb914b#rd">
+                <h2 class="post-title">            
+                    双十一之购物车体验
+                </h2>        
+                      
+                <div class="post-content-preview1">
+                    今年的双十一，你剁手了吗？不管你剁不剁，反正我是剁了。剁手的同时，不妨来看看，电商购物车的哪些设计让你剁了还想剁。本文主要讲四个电商网站的购物车，分别是淘宝、京东、唯品会和聚美优品。
+
+一. 满减优惠
+
+满减优惠充分刺激起用户“占小便宜”心理，让用户以为卖家亏了，而自己占了便宜，增强他们购物的成就感，从而刺激他们买买买。
+                </div>
+            </a>
+            <p class="post-meta">Posted by Snow on November 12, 2015</p>
+        
+        </div>
+        <hr>
+
+
+        <div class="post-preview">
+            <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDQ1Njc3NQ==&mid=403924504&idx=1&sn=c892db75cb05b8d8d55edd43ee8b147b#rd">
+                <h2 class="post-title">            
+                    香港·设计
+                </h2>
+        
+                <!-- <h3 class="post-subtitle">
+                    ES5, ES6, ES2016, ES.Next: What's going on with JavaScript versioning?
+                </h3> -->
+        
+                <div class="post-content-preview1">
+                    一月底去香港玩了两天，注意到香港的一些设计点，在这里与大家分享。一. 为盲人而设计
+
+1. 带声音的红绿灯在香港的街上走的时候总能听到“嘀嘀嘀”的声音，那是红绿灯在发声。绿灯时嘀嘀声节奏慢，红灯时嘀嘀声节奏快。通过声音告诉行人（特别是盲人）是否可以过马路。同样的，电动扶梯也有嘀嘀嘀的声音来提醒行人到电动扶梯口了。
+                </div>
+            </a>
+            <p class="post-meta">Posted by Snow on February 01, 2016</p>
+        
+        </div>
+        <hr>
+
+        
+
+        <div class="post-preview">
+            <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDQ1Njc3NQ==&mid=215026211&idx=1&sn=9bc6b0bc84002c8613933db2a69dc582&scene=20#rd">
+                <h2 class="post-title">            
+                    游戏策划详解 —— 史玉柱原文总结
+                </h2>        
+                      
+                <div class="post-content-preview1">
+                    本文是《史玉柱自述：我的营销心得》中游戏策划部分的总结，强烈建议阅读原文，有很多例子。史玉柱先生首先声明，本文的体会主要是基于MMORPG(大型多人在线角色扮演游戏)， 未必适用于其他类别的游戏，如休闲类等。
+
+首先，一款网游能获得多少利润，最重要的因素就是游戏性。虽然营销也很重要，但游戏性是根本。
+                </div>
+            </a>
+            <p class="post-meta">Posted by Snow on October 01, 2015</p>
+        
+        </div>
+        <hr>
+
+        
+        <div class="post-preview">
+            <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDQ1Njc3NQ==&mid=212500322&idx=1&sn=d6bfc7a1c6feb4ef5f65ecd66f7f5670#rd">            
+                <h2 class="post-title">   
+                    《设计的法则》摘录一
+                </h2>        
+                      
+                <div class="post-content-preview1">
+                   一、美观实用法则
+原理：人们会认为美观的东西更实用，不管事实是否如此。好用但不美观的设计，接受程度往往不高，也就谈不到是否实用了。这些认知偏见及其所带来的一系列后续反应是难以改变的。在人的魅力方面也有类似的现象。研究显示，我们对人的第一印象会影响之后的态度形成。美观的设计更能促进正面态度的形成，而且人们更愿意容忍美观设计的缺陷。
+
+                </div>
+            </a>
+            <p class="post-meta">Posted by Snow on July 15, 2015</p>
+        
+        </div>
+        <hr>
+        
+
+        <div class="post-preview">
+            <a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDQ1Njc3NQ==&mid=213313297&idx=1&sn=06488a68f9875d7ffce209b25fb7dd30&scene=20#rd">
+                <h2 class="post-title">            
+                    设计的法则 读书笔记二
+                </h2>        
+                      
+                <div class="post-content-preview1">
+                    一、表现VS.偏爱
+
+原理：帮助人们达到最理想使用效果的设计，常常不是人们最喜欢的设计。
+
+详解：比如Dvorak键盘，据研究能提升打字效率30%以上，但却不受欢迎，因为大家比较习惯QWERTY键盘。这说明，人们喜欢某项设计而不喜欢另一项设计的原因有很多，而且很有可能跟设计好不好用无关。得知“表现”“偏爱”需求的最好方式，就是在真是状况下，观察人们与设计的互动情况。
+
+延伸：喜马拉雅app的返回键设置在页面左下角而不是左上角，虽然使得返回键离手指更近了，操作似乎是更方便了，但是因为用户习惯了按左上角的返回键，所以反而对喜马拉雅的这个看似更优的设计更不理解。
+                </div>
+            </a>
+            <p class="post-meta">Posted by Snow on August 09, 2015</p>
+        
+        </div>
+        <hr>
+<div class="more-link">更多文章请关注我的微信公众号：<span style="color:#0000ff;">用户体验报告</span>，或者<a target="_blank" href="http://oriental13.lofter.com">Lofter</a>，或者<a target="_blank" href="http://www.jianshu.com/users/d27e26cd024d/latest_articles">简书</a></div>
+
+    </div>
+    
+    <a class="to-top" href="#top" ><span class="icon-arrow-top"></span><br/> Top </a>
+</div>
+
+
+
+
+<footer class="footer-my">
+    <ul>
+        <a href="index.html"><li style="display:inline">Portfolio</li></a>&nbsp &nbsp | &nbsp &nbsp      
+        <a href="writings.html"><li style="display:inline">Writings</li></a>&nbsp &nbsp | &nbsp &nbsp     
+        <a href="about.html"><li style="display:inline">About</li></a>
+    </ul><br/>
+    Copyright @Snow 杨宝玲  2016
+</footer>
+      
+
+
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/hux-blog.min.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js",function(){
+        hljs.initHighlightingOnLoad();
+    })
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'huangxuan.me';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- Tencent QQ Analysis -->
+<script type="text/javascript" src="./About - Hux Blog_files/stats" charset="UTF-8"></script>  
+</body>
+
+</html>
