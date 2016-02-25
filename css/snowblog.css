@@ -1258,16 +1258,23 @@ div.col-md-4-my:hover, div.col-md-4-my:active
   width:100%;
   /*height:50px;*/
   padding:12px 10px;
-  background-color: rgba(0,0,0,0.5);
+  /*background-color: rgba(0,0,0,0.5);*/
+  background-color: rgba(255,255,255,1);
   position: absolute;
-  bottom:0;
-  color: #fff;
+  bottom:0px;
+  color: #333;
   text-align: left;
+}
+.port-text-small
+{
+  font-size: 0.9em;
+  color:#666;
 }
 .img-inpage
 {
   width:100%;
   height:100%;
+  max-width: 100%;
   /*text-align:center;*/
   margin:0 auto;
 }
@@ -1289,6 +1296,13 @@ div.col-md-4-my:hover, div.col-md-4-my:active
 div.img-inpage2:hover
 {
   background-color: #30bf71;
+}
+.row-textfield
+{
+  width:100%;
+  padding: 9% 9%;
+  margin:0 auto;
+  text-align: center;
 }
 .img-demo-circle
 {
