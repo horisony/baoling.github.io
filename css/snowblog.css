@@ -7,6 +7,9 @@
 .clear{
   clear:both;
 }
+img{
+  max-width: 100%;
+}
 
 @media (min-width: 1200px) {
   .post-container,
@@ -1397,7 +1400,14 @@ a.to-top:hover/*,div.to-top:active*/
 {
   color:#1111ee;
 }
-
+.row-padding
+{
+  padding:5% 2%;
+}
+.text-left
+{
+  text-align: left;
+}
 @media only screen and (min-width:1171px) {
   /*.each-port
   {
@@ -1413,6 +1423,11 @@ a.to-top:hover/*,div.to-top:active*/
   width:30%;
   height:280px;
   background-color: white;
+  }
+  .col-lg-6-my
+  {
+    width:50%;
+    float:left;
   }
   .other-posts
   {
@@ -1451,6 +1466,11 @@ a.to-top:hover/*,div.to-top:active*/
   height:280px;
   background-color: white;
   }
+  .col-lg-6-my
+  {
+    width:100%;
+    
+  }
   .other-posts
   {
   width:100%;
@@ -1485,6 +1505,11 @@ a.to-top:hover/*,div.to-top:active*/
   width:49%;
   height:220px;
   background-color: white;
+  }
+  .col-lg-6-my
+  {
+    width:100%;
+    
   }
   .other-posts
   {
@@ -1522,6 +1547,11 @@ a.to-top:hover/*,div.to-top:active*/
   width:100%;
   height:220px;
   background-color: white;
+  }
+  .col-lg-6-my
+  {
+    width:100%;
+    
   }
   .other-posts
   {
