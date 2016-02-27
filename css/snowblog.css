@@ -1448,6 +1448,7 @@ a.to-top:hover/*,div.to-top:active*/
   position:relative;
   }
 
+
 }
 
 @media only screen and (min-width:768px) and (max-width:1170px) {
@@ -1489,6 +1490,12 @@ a.to-top:hover/*,div.to-top:active*/
   box-shadow: 0 0 2px #ccc;
   position:relative;
   }
+  .industrial-img
+  {
+    max-width: 460px;
+    margin:0 auto;
+
+  }
 }
 @media only screen and (max-width:767px)and (min-width: 441px){
   /*.each-port
@@ -1529,6 +1536,12 @@ a.to-top:hover/*,div.to-top:active*/
   box-shadow: 0 0 2px #ccc;
   position:relative;
 
+  }
+   .industrial-img
+  {
+    max-width: 460px;
+    margin:0 auto;
+    
   }
 }
 
