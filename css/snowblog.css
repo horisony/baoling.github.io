@@ -1107,7 +1107,11 @@ div.github:hover
   border-radius: 8px;
  
 }
-
+.left-bar a
+  {
+    color:#1111ff;
+    text-decoration: underline;
+  }
 
 @media only screen and (min-width:1171px) {
     .row-my{ width:1170px;margin:0 auto; text-align: center;/*background-color: yellow;*/padding: 20px 0;}
@@ -1152,11 +1156,7 @@ div.github:hover
   float:left;
   line-height: 50px;
   }
-  .me-img
-  {
-    max-width:160px;
-    max-height:160px;
-  }
+
 
   .left-bar
   {
@@ -1209,11 +1209,7 @@ div.github:hover
   float:left;
   line-height: 50px;
   }
-  .me-img
-  {
-    max-width:140px;
-    max-height:140px;
-  }
+
    
   .left-bar
   {
@@ -1258,11 +1254,7 @@ div.github:hover
   float:left;
   line-height: 46px;
   }
-    .me-img
-  {
-    max-width:120px;
-    max-height:120px;
-  }
+
   .left-bar
   {
     width:100%;
