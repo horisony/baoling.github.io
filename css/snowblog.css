@@ -1100,6 +1100,13 @@ div.github:hover
 {
   background-color: #201d1e;
 }
+.me-img
+{
+  width:140px;
+  height:164px;
+  border-radius: 8px;
+ 
+}
 
 
 @media only screen and (min-width:1171px) {
@@ -1150,7 +1157,7 @@ div.github:hover
     max-width:160px;
     max-height:160px;
   }
-  
+
   .left-bar
   {
     width:76%;height:600px;float:left;
@@ -1204,9 +1211,10 @@ div.github:hover
   }
   .me-img
   {
-    width:200px;
-    height:200px;
+    max-width:140px;
+    max-height:140px;
   }
+   
   .left-bar
   {
     width:100%;padding-left: 30px;
@@ -1252,8 +1260,8 @@ div.github:hover
   }
     .me-img
   {
-    width:140px;
-    height:140px;
+    max-width:120px;
+    max-height:120px;
   }
   .left-bar
   {
