@@ -4,6 +4,7 @@
 	height:300px;
 	background-color: black;
 }*/
+
 .clear{
   clear:both;
 }
@@ -1103,13 +1104,23 @@ div.github:hover
 
 @media only screen and (min-width:1171px) {
     .row-my{ width:1170px;margin:0 auto; text-align: center;/*background-color: yellow;*/padding: 20px 0;}
-    .row-my-inpage{ /*z-index:9;position:absolute;top:370px;*/width:1170px;margin:0 auto; text-align: left;background-color:white;padding: 2% 2%;}
+    .row-my-inpage{ /*z-index:9;top:370px;*/position:absolute;width:1170px;margin:0 auto; text-align: left;background-color:white;padding: 2% 2%;clear:both;}
     .row{margin:0 auto; text-align: center;}
     .col-md-4-my
   {
   box-shadow: 0 1px 6px #c5d4da;
   margin:0 2px;
   position:relative;
+  }
+  .col-lg-push-6-my
+  {
+    left:50%;
+    /*position:absolute;*/
+  }
+  .col-lg-pull-6-my
+  {
+    right:50%;
+    /*position:absolute;*/
   }
   .navbar-inpage
   {
@@ -1402,7 +1413,7 @@ a.to-top:hover/*,div.to-top:active*/
 }
 .row-padding
 {
-  padding:5% 2%;
+  padding:0;
 }
 .text-left
 {
@@ -1428,6 +1439,7 @@ a.to-top:hover/*,div.to-top:active*/
   {
     width:50%;
     float:left;
+    position:relative;
   }
   .other-posts
   {
