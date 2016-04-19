@@ -7,7 +7,38 @@
 	height:300px;
 	background: #ccc;
 	margin:0;
+	background-size:cover;
 }
+
+@media only screen and (max-width: 767px){
+	.navbar-default .navbar-collapse{
+		background: rgba(255,255,255,0.92);
+		color:#666;
+	}
+	.navbar-default .navbar-collapse li:hover{
+		background: #ddd;
+		color:#333;
+	}
+	
+	.navbar-default .navbar-toggle {
+		background: transparent;
+		border:transparent;
+		padding: 19px 16px;
+		border-radius: 50%;		
+	}
+	.navbar-default .navbar-toggle:focus,
+	.navbar-default .navbar-toggle:hover {
+	  background-color: inherit;
+	}
+	.navbar-default .navbar-toggle:active {
+	  background-color: rgba(255, 255, 255, 0.25);
+	}
+	.navbar-default .navbar-toggle .icon-bar{
+		background:white;
+	}
+
+}
+
 .navbar-custom{
 	background:none;
 	border:none;
@@ -34,10 +65,41 @@
   line-height: 20px;
   font-weight: 800;
   letter-spacing: 1px;
-  color:white;
+  /*color:white;*/
 }
+
+.navbar-custom .nav li a:hover, 
 .navbar-custom .nav li a:active {
-  color:white;
-  background: none;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.9);
+  /*background: none;*/
+}
+
+@media only screen and (min-width: 768px){
+	.navbar-custom {
+	  background: transparent;
+	  border-bottom: 1px solid transparent;
+	}
+	.navbar-custom body {
+	  font-size: 20px;
+	}
+	.navbar-custom .navbar-brand {
+	  color: white;
+	  padding: 20px;
+	  line-height: 20px;
+	}
+	.navbar-custom .navbar-brand:hover,
+	.navbar-custom .navbar-brand:focus {
+	  color: rgba(255, 255, 255, 0.8);
+	}
+	.navbar-custom .nav li a {
+	  color: white;
+	  padding: 20px;
+	}
+	.navbar-custom .nav li a:hover,
+	.navbar-custom .nav li a:focus {
+	  color: rgba(255, 255, 255, 0.8);
+	}
+	.navbar-custom .nav li a:active {
+	  background: none;
+	}
 }
