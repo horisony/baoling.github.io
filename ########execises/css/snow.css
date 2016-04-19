@@ -39,4 +39,5 @@
 .navbar-custom .nav li a:active {
   color:white;
   background: none;
+  color: rgba(255, 255, 255, 0.8);
 }
