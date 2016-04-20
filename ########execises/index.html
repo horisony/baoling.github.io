@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/snow.css">
 
+	
 
 </head>
 <body>
@@ -46,8 +47,7 @@
 
 	<div class="big-box"></div>
 
-
-
+	
 	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 	<script src="js/jquery.min.js"></script>
 
@@ -55,25 +55,27 @@
 	<script src="js/bootstrap.min.js"></script>
 	
 	<script type="text/javascript" >
-		$(document).ready(function() {
-			$("#selected-case-count").hide();
-		});
+		// $(document).ready(function() {
+		// 	$("#selected-case-count").hide();
+		// });
 
-		var preTop=90px;
+		
 		var currTop=0;
+		
 		$(document).ready(function() {
 			$(window).scroll(function(){
-				currTop=$(window).scrollTop();
-				if(currTop<preTop){
-					$("#selected-case-count").fadeOut(200);
-				}elseif ($(window).scrollTop()>600){
-					$("#selected-case-count").fadeIn(500);
+				var currTop=$(window).scrollTop();
+				if (currTop<200){
+					$("#selected-case-count").fadeOut(300);
 				}else{
-					$("#selected-case-count").fadeOut(500);
+					$("#selected-case-count").fadeIn(300);
 				}
-				preTop=$(window).scrollTop();
+
+				$("#selected-case-count").text(currTop);
+				
 			});
 		});
 	</script>
+
 </body>
 </html>

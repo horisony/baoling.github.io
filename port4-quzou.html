@@ -240,7 +240,26 @@
         if($nav) FastClick.attach($nav);
     })
 </script>
-
+<!-- to-top hide and show -->
+<script type="text/javascript" >
+    $(document).ready(function() {
+     $(".to-top").hide();
+    });
+    
+    var currTop=0;
+    
+    $(document).ready(function() {
+        $(window).scroll(function(){
+            var currTop=$(window).scrollTop();
+            if (currTop<1500){
+                $(".to-top").fadeOut(300);
+            }else{
+                $(".to-top").fadeIn(300);
+            }            
+            
+        });
+    });
+</script>
 
 <!-- Google Analytics -->
 
