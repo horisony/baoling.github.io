@@ -42,10 +42,14 @@
 	<header class="intro-header" style="background-image:url(img/portfolio-bg.png)"></header>
 
 	<p id="selected-case-count">
-	 是否垃圾地方频道介绍的浪费就爱玩手机发票及喷雾法圣诞节福利就发啦是大家分工合理设计分类登记费奇偶位就是法律的结果就是拉风是对方家里的风景刚接完你头发后发生了地方就分居价格
+	 123
 	</p>
 
-	<div class="big-box"></div>
+	<div class="big-box">
+		<div class="show-to-right">
+			122 31232,4535 45,21312 321,321 31`124 3,123 21
+		</div>
+	</div>
 
 	
 	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
@@ -57,24 +61,35 @@
 	<script type="text/javascript" >
 		// $(document).ready(function() {
 		// 	$("#selected-case-count").hide();
+		// 	$(".show-to-right").hide();
 		// });
-
 		
 		var currTop=0;
 		
 		$(document).ready(function() {
 			$(window).scroll(function(){
 				var currTop=$(window).scrollTop();
-				if (currTop<200){
-					$("#selected-case-count").fadeOut(300);
-				}else{
-					$("#selected-case-count").fadeIn(300);
-				}
+				// if (currTop<200){
+					// $("#selected-case-count").fadeOut(300);
+					$(".show-to-right").animate({left:'300px'});
+					// $(".show-to-right").fadeOut(300);
+				// }else{
+					// $("#selected-case-count").fadeIn(300);
+					// $(".show-to-right").animate({left:'600px'});
+					// $(".show-to-right").fadeIn(300);
+				// }
 
 				$("#selected-case-count").text(currTop);
 				
 			});
 		});
+
+		// $(document).ready(function() {
+		// 	$(window).scroll(function(){
+		// 		$(".show-to-right").animate({right:'300px'}});
+		// 	}
+		// }
+
 	</script>
 
 </body>
