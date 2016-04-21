@@ -42,6 +42,7 @@
 .navbar-custom{
 	background:none;
 	border:none;
+	position: absolute;
 	top:0;
 	left:0;
 	width:100%;
@@ -104,13 +105,118 @@
 	}
 }
 
-
+@media only screen and (min-width: 1170px) {
+  .navbar-custom {  	
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .navbar-custom.is-fixed {
+    /* when the user scrolls down, we hide the header right above the viewport */
+    position: fixed;
+    top: -61px;
+    /*background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #f2f2f2;*/
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+  }
+  .navbar-custom.is-fixed .navbar-brand {
+    color: #404040;
+  }
+  .navbar-custom.is-fixed .navbar-brand:hover,
+  .navbar-custom.is-fixed .navbar-brand:focus {
+    color: #0085a1;
+  }
+  .navbar-custom.is-fixed .nav li a {
+    color: #404040;
+  }
+  .navbar-custom.is-fixed .nav li a:hover,
+  .navbar-custom.is-fixed .nav li a:focus {
+    color: #0085a1;
+  }
+  .navbar-custom.is-visible {
+    /* if the user changes the scrolling direction, we show the header */
+    background: rgba(255,255,255,0.8);
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+.show-area{
+	height:350px;
+}
 .big-box{
 	width:100%;
 	height:1200px;
 	background: grey;
 	margin:0;
+	padding: 20px 100px;
 }
+
+.port1, .port2, .port3, .port4, .port5, .port6{
+	width:300px;
+	height:200px;
+	background: #f1f1f1;
+	border-radius:4px;
+	border:1px solid #grey;
+	-webkit-transition: 300ms; /* For Safari 3.1 to 6.0 */
+	transition: 250ms;
+	background: no-repeat center center;
+	background-size:cover;
+	margin:20px;
+	float:left;
+	position: relative;
+}
+
+.port1:hover{
+	/*width:300px;*/
+	/*height:220px;*/
+	-ms-transform: translate(0,-10px); /* IE 9 */
+	-webkit-transform: translate(0,-10px); /* Safari */
+	transform: translate(0,-10px);
+	/*box-shadow: 0px 1px 16px #3258dd;*/
+}
+
+.port2:hover{
+	/*box-shadow: 0px 1px 16px #3258dd;*/
+	background-position: 50% 55%;
+}
+
+.port3:hover{
+	width:300px;
+	height:280px;
+	-webkit-transition: 500ms;
+	-webkit-transition-timing-function: ease-out;/*linear,ease,ease-in,ease-out,ease-in-out*/
+    transition-timing-function: ease-out;
+}
+
+.port-layer{
+	opacity: 0;
+	width:100%;
+	height:100%;
+	background:rgba(200,250,245,0.9);
+	color:#333;
+	text-align: center;
+	padding-top:50px;
+	/*visibility: hidden;*/
+	-webkit-transition:  200ms;
+    -moz-transition:  200ms;
+    transition: 200ms;
+/*    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;*/
+}
+
 
 p#selected-case-count{
 	width:200px;
@@ -128,7 +234,8 @@ p#selected-case-count{
 .show-to-right{
 	width:200px;
 	padding:20px;
-	margin:200px 200px;
+	position: relative;
+	/*margin:200px 200px;*/
 	float:left;
 	background: white;
 	border-radius: 6px;
