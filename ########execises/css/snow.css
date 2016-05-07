@@ -2,12 +2,21 @@
 	margin:0;
 }
 .intro-header{
-	background: no-repeat center center;
+
+	/*background: no-repeat center center;*/
 	width:100%;
 	height:300px;
 	background: #ccc;
+	background:url("../img/star.png") 5% 5%,
+	url("../img/star.png") 20% 20%,
+	url("../img/star.png") 90% 90%;
+		
+		
 	margin:0;
-	background-size:cover;
+	/*background-size:cover;*/
+}
+.clear{
+	clear:both;
 }
 
 @media only screen and (max-width: 767px){
@@ -158,7 +167,7 @@
 }
 .big-box{
 	width:100%;
-	height:1200px;
+	/*height:1200px;*/
 	background: grey;
 	margin:0;
 	padding: 20px 100px;
@@ -240,4 +249,19 @@ p#selected-case-count{
 	background: white;
 	border-radius: 6px;
 	box-shadow: 2px 2px 2px #deab67;
+}
+
+.animation-bg{
+	width:100%;
+	height:800px;
+	background:url("../img/icon.png") 5% 5%,
+	url("../img/me1.png") 20% 20%;
+	top: 218px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+	-webkit-transition: left 300s linear;
+	transition: left 300s linear;
+	
 }
