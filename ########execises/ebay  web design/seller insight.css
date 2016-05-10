@@ -28,7 +28,7 @@ body{
 	float:left;
 	text-align: center;
 }
-.health-item-text{
+.item-text{
 	font-size:1.2em;
 }
 .dashboard-header
@@ -45,6 +45,9 @@ body{
 	text-decoration: underline;
 	color:#337ab7;
 }
+.dashboard-more:hover{
+	color:#34abff;
+}
 .two-col-dash{
 	margin-top: 12px;
 }
@@ -60,4 +63,12 @@ body{
 	padding-left:6px;
 }
 
-
+.data-text{
+	text-align: center;
+} 
+.col-md-3 .col-md-4{
+    padding-top:50px;
+}
+.col-md-4{
+	padding-left:0;
+}

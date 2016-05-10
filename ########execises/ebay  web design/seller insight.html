@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="seller insight.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <style type="text/css">
+/*    .gro-main-content {
+    	padding: 20px;
+    	min-width:1200px;
+    }
+    .gro-main-content .row {
+        margin-left:0;
+    	margin-right:0;
+    }*/
+   
+    </style>
 
 </head>
 <body>
@@ -36,25 +50,25 @@
 			  	</header>
 			  	<body class="dashboard-body">
 			  		<div class="health-item">
-			  			<h2>$40.34M</h2> <span class="health-item-text">GMV</span>
+			  			<h2>$40.34M</h2> <span class="item-text">GMV</span>
 			  		</div>
 			  		<div class="health-item">
-			  			<h2>+13.23%</h2> <span class="health-item-text">GMV YoY</span>
+			  			<h2>+13.23%</h2> <span class="item-text">GMV YoY</span>
 			  		</div>
 			  		<div class="health-item">
-			  			<h2>$5.12M</h2> <span class="health-item-text">Revenue</span>
+			  			<h2>$5.12M</h2> <span class="item-text">Revenue</span>
 			  		</div>
 			  		<div class="health-item">
-			  			<h2>2.17M</h2> <span class="health-item-text">Transactions</span>
+			  			<h2>2.17M</h2> <span class="item-text">Transactions</span>
 			  		</div>
 			  		<div class="health-item">
-			  			<h2>$32.01</h2> <span class="health-item-text">ASP</span>
+			  			<h2>$32.01</h2> <span class="item-text">ASP</span>
 			  		</div>
 			  		<div class="health-item">
-			  			<h2>$2.21M</h2> <span class="health-item-text">Subsidy</span>
+			  			<h2>$2.21M</h2> <span class="item-text">Subsidy</span>
 			  		</div>
 			  		<div class="health-item">
-			  			<h2>$5.11M</h2> <span class="health-item-text">Deals GMV</span>
+			  			<h2>$5.11M</h2> <span class="item-text">Deals GMV</span>
 			  		</div>
 
 			  		<div class="clear"></div>
@@ -63,27 +77,39 @@
 		  	</div>
 		  	<div class="two-col-dash">
 		  		<div class="col-left">
-				  	<div class="dashboard inventory">
+				  	<div class="dashboard">
 				  		<header class="dashboard-header">
 					  		<span class="dashboard-title">Inventory</span>
 					  		<a href="#"><span class="dashboard-more">More</span></a>
 					  		<div class="clear"></div>
 					  	</header>
 					  	<body class="dashboard-body">
+			  		
+			  				<div class="col-md-3 data-text" style="height:120px;">
+			  					<h2>2.34M</h2><span class="item-text">Total Listings</span>
+			  				</div>
+			  				<div class="dot_chart col-md-4" style="height:100px;"></div>
+			  				<div class="bar_chart col-md-5" style="height:120px;"></div>
 
+						<div class="clear"></div>
 					  	</body>
 				  		
 				  	</div>
 			  	</div>
 			  	<div class="col-right">
-				  	<div class="dashboard ">
+				  	<div class="dashboard">
 				  		<header class="dashboard-header">
-					  		<span class="dashboard-title">Inventory</span>
+					  		<span class="dashboard-title">Demand</span>
 					  		<a href="#"><span class="dashboard-more">More</span></a>
 					  		<div class="clear"></div>
 					  	</header>
 					  	<body class="dashboard-body">
-
+					  		<div class="col-md-3 data-text" style="height:120px;">
+			  					<h2>2.34M</h2><span class="item-text">Total Listings</span>
+			  				</div>
+			  				<div class="dot_chart col-md-4" style="height:100px;"></div>
+			  				<div class="bar_chart col-md-5" style="height:120px;"></div>
+			  			<div class="clear"></div>
 					  	</body>
 				  		
 				  	</div>
@@ -103,7 +129,170 @@
 		
 
 	</div>
+	<script type="text/javascript" >
+	$(function () {
+		 $('.dot_chart').highcharts({
 
+	        chart: {
+	            type: 'bubble',
+	            plotBorderWidth: 0,
+	            zoomType: 'xy'
+	        },
+
+	        legend: {
+	            enabled: false
+	        },
+
+			credits: {
+	            enabled: false
+	        },
+	        title: {
+	            text: null
+	        },
+	        exporting: {
+	            enabled:false
+	        },
+	        tooltip: {
+	            enabled:false
+	        },
+	        xAxis: {
+	            gridLineWidth: 0,
+	            title: {
+	                text: null
+	            },
+	            labels: {
+	                format: '{value} k'
+	            }
+	        },
+
+	        yAxis: {
+	            min: 0,
+	            max: 1,
+	            title: {
+	                text: null
+	            },
+	            categories: ["Fixed Price","Auction"]
+	        },
+
+	        plotOptions: {
+	            bubble: {
+	                lineWidth: 0,
+	                minSize: 8,
+	                maxSize: 8
+	            }
+	        },
+
+	        series: [{
+	        marker: {
+	            fillColor: 'rgba(24,108,187,1)',
+	            fillOpacity: 1
+	        },
+	            data: [
+	                { x: 75, y: 1},
+	                { x: 80, y: 1},
+	                { x: 85, y: 1},
+	                { x: 90, y: 1},
+	                { x: 75, y: 0, marker: {
+	                fillColor: 'rgba(124,181,236,1)'
+	            }},
+	                { x: 80, y: 0, marker: {
+	                fillColor: 'rgba(124,181,236,1)'
+	            }},
+	                { x: 85, y: 0, marker: {
+	                fillColor: 'rgba(124,181,236,1)'
+	            }}
+	            ]
+	        }]
+
+	    });
+	    $('.bar_chart').highcharts({
+	        chart: {
+	            type: 'bar'
+	        },
+			title: {
+			    text:null
+		    },
+	        xAxis: {
+	            categories: ['0-5', '5-25', '25-100']
+	        },
+			credits: {
+	            enabled: false
+	        },
+	        yAxis: {
+	            min: 0,
+				title: {
+					text:null
+				}
+	        },
+			exporting: {
+			    enabled:false
+			},
+	        legend: {
+	            //reversed: true
+				enabled: false
+	        },
+	        plotOptions: {
+	            series: {
+	                stacking: 'normal',
+	                pointWidth: 20
+	            }
+	        },
+	        series: [{
+	            name: 'Auction',
+	            data: [2, 2, 1]
+	        }, {
+	            name: 'Fixed Price',
+	            data: [9, 8, 4],
+	            color:"#0082dd"
+	        }]
+	    });
+		 $('.gender_bar').highcharts({
+	        chart: {
+	            type: 'column'
+	        },
+	        title: {
+	            text: null
+	        },
+	        xAxis: {
+	            type: 'category'
+	        },
+	        yAxis: {
+	            title: {
+	                text: null
+	            }
+
+	        },
+			    credits: {
+	            enabled: false
+	        },
+	        legend: {
+	            enabled: false
+	        },
+	        plotOptions: {
+	            series: {
+	                borderWidth: 0,
+	                dataLabels: {
+	                    enabled: true,
+	                    format: '{point.y:.1f}%'
+	                }
+	            }
+	        },
+
+	        series: [{
+	            name: 'Buyer Share',
+	            colorByPoint: true,
+	            data: [{
+	                name: 'Male',
+	                y: 24.03
+	            }, {
+	                name: 'Female',
+	                y: 10.38,
+	                color: "#F15C80"
+	            }]
+	        }]
+	    });
+	});
+	</script>
     
 </body>
 </html>
