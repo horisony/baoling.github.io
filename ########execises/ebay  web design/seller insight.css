@@ -1,0 +1,63 @@
+body{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.clear{
+	clear:both;
+}
+.tab-content{
+	padding:20px;
+	border-top:none;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.content-area{
+	width:100%;
+ 	padding:20px;
+    /*margin:auto;*/
+}
+#Summary{
+	
+}
+.dashboard{
+	border: 1px solid #ddd;
+	padding:20px 20px;
+}
+.health-item{
+	width:14.26%;
+	float:left;
+	text-align: center;
+}
+.health-item-text{
+	font-size:1.2em;
+}
+.dashboard-header
+{
+	font-size:1.2em;
+}
+.dashboard-title{
+	float:left;
+	font-weight: bold;
+	color:#666;
+}
+.dashboard-more{
+	float:right;
+	text-decoration: underline;
+	color:#337ab7;
+}
+.two-col-dash{
+	margin-top: 12px;
+}
+
+.col-left{
+	width:50%;
+	float:left;
+	padding-right:6px;
+}
+.col-right{
+	width:50%;
+	float:left;
+	padding-left:6px;
+}
+
+
