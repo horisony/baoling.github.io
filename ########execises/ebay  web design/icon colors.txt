@@ -1,0 +1,5 @@
+female:#ff89b5; #ff1e73;
+male:#9bd0ff;#006ed0;
+
+phone:#8ec7a5;#059148;
+computer:#fda455;:#d35400;

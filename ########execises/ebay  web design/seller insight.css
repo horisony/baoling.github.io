@@ -112,3 +112,39 @@ body{
 	border-bottom: 2px solid #0096ff;
 	color:#0096ff;	
 }
+.imgs{
+	text-align: center;
+}
+.imgs_left{
+	width:50px;
+	text-align: center;
+	float:right;
+}
+.imgs_right{
+	width:50px;
+	text-align: center;
+	float:left;
+}
+.imgs_left2{
+	width:45px;
+	text-align: center;
+	float:right;
+}
+.imgs_right2{
+	width:86px;
+	text-align: center;
+	float:left;
+}
+.txt-center{
+	text-align: center;
+}
+.imgs_left3{
+	width:70px;
+	text-align: center;
+	float:right;
+}
+.imgs_right3{
+	width:86px;
+	text-align: center;
+	float:left;
+}
