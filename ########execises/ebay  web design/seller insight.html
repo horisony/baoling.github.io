@@ -88,8 +88,8 @@
 			  				<div class="col-md-3 data-text" style="height:120px;">
 			  					<h2>2.34M</h2><span class="item-text">Total Listings</span>
 			  				</div>
-			  				<div class="dot_chart col-md-4" style="height:100px;"></div>
-			  				<div class="bar_chart col-md-5" style="height:120px;"></div>
+			  				<div class="dot_chart1 col-md-4" style="height:120px;"></div>
+			  				<div class="bar_chart1 col-md-5" style="height:120px;"></div>
 
 						<div class="clear"></div>
 					  	</body>
@@ -105,10 +105,16 @@
 					  	</header>
 					  	<body class="dashboard-body">
 					  		<div class="col-md-3 data-text" style="height:120px;">
-			  					<h2>2.34M</h2><span class="item-text">Total Listings</span>
+			  					<h2>54.1M</h2><span class="item-text">Searches</span>
 			  				</div>
-			  				<div class="dot_chart col-md-4" style="height:100px;"></div>
-			  				<div class="bar_chart col-md-5" style="height:120px;"></div>
+			  				<div class="dot_chart col-md-9" style="height:120px;">
+			  					<ul class="nav nav-tabs">
+			  					  <li role="presentation" class="active"><a data-toggle="tab" href="#Top_KW">Top KW</a></li>
+			  					  <li role="presentation"><a data-toggle="tab" href="#Top_Movers">Top Movers</a></li>
+			  					  <li role="presentation"><a data-toggle="tab" href="#Seasonal_KW">Seasonal KW</a></li>
+			  					</ul>
+			  				</div>
+			  			
 			  			<div class="clear"></div>
 					  	</body>
 				  		
@@ -130,169 +136,252 @@
 
 	</div>
 	<script type="text/javascript" >
-	$(function () {
-		 $('.dot_chart').highcharts({
-
-	        chart: {
-	            type: 'bubble',
-	            plotBorderWidth: 0,
-	            zoomType: 'xy'
-	        },
-
-	        legend: {
-	            enabled: false
-	        },
-
-			credits: {
-	            enabled: false
-	        },
-	        title: {
-	            text: null
-	        },
-	        exporting: {
-	            enabled:false
-	        },
-	        tooltip: {
-	            enabled:false
-	        },
-	        xAxis: {
-	            gridLineWidth: 0,
-	            title: {
-	                text: null
-	            },
-	            labels: {
-	                format: '{value} k'
-	            }
-	        },
-
-	        yAxis: {
-	            min: 0,
-	            max: 1,
-	            title: {
-	                text: null
-	            },
-	            categories: ["Fixed Price","Auction"]
-	        },
-
-	        plotOptions: {
-	            bubble: {
-	                lineWidth: 0,
-	                minSize: 8,
-	                maxSize: 8
-	            }
-	        },
-
-	        series: [{
-	        marker: {
-	            fillColor: 'rgba(24,108,187,1)',
-	            fillOpacity: 1
-	        },
-	            data: [
-	                { x: 75, y: 1},
-	                { x: 80, y: 1},
-	                { x: 85, y: 1},
-	                { x: 90, y: 1},
-	                { x: 75, y: 0, marker: {
-	                fillColor: 'rgba(124,181,236,1)'
-	            }},
-	                { x: 80, y: 0, marker: {
-	                fillColor: 'rgba(124,181,236,1)'
-	            }},
-	                { x: 85, y: 0, marker: {
-	                fillColor: 'rgba(124,181,236,1)'
-	            }}
-	            ]
-	        }]
-
-	    });
-	    $('.bar_chart').highcharts({
-	        chart: {
-	            type: 'bar'
-	        },
-			title: {
-			    text:null
-		    },
-	        xAxis: {
-	            categories: ['0-5', '5-25', '25-100']
-	        },
-			credits: {
-	            enabled: false
-	        },
-	        yAxis: {
-	            min: 0,
-				title: {
-					text:null
-				}
-	        },
-			exporting: {
-			    enabled:false
+$(function () {
+var dot_opts = {
+        chart: {
+            type: 'bubble',
+            plotBorderWidth: 0,
+            zoomType: 'xy'
+        },
+        legend: {
+            enabled: false
+        },
+		credits: {
+            enabled: false
+        },
+        title: {
+            text: null
+        },
+        exporting: {
+            enabled:false
+        },
+        tooltip: {
+            enabled:false
+        },
+        xAxis: {
+            gridLineWidth: 0,
+            visible: false
+        },
+        yAxis: {
+            gridLineWidth: 0,
+			min:0,
+			max:1,
+            title: {
+                text: null
+            },
+            categories: ["Fixed Price","Auction"]
+        },
+        plotOptions: {
+            bubble: {
+                lineWidth: 0,
+                minSize: 8,
+                maxSize: 8
+            }
+        },
+        series: [{
+			marker: {
+				fillColor: 'rgba(24,108,187,1)',
+				fillOpacity: 1
 			},
-	        legend: {
-	            //reversed: true
-				enabled: false
-	        },
-	        plotOptions: {
-	            series: {
-	                stacking: 'normal',
-	                pointWidth: 20
-	            }
-	        },
-	        series: [{
-	            name: 'Auction',
-	            data: [2, 2, 1]
-	        }, {
-	            name: 'Fixed Price',
-	            data: [9, 8, 4],
-	            color:"#0082dd"
-	        }]
-	    });
-		 $('.gender_bar').highcharts({
-	        chart: {
-	            type: 'column'
-	        },
-	        title: {
-	            text: null
-	        },
-	        xAxis: {
-	            type: 'category'
-	        },
-	        yAxis: {
-	            title: {
-	                text: null
-	            }
+			data: [
+					{ x: 75, y: 1},
+					{ x: 80, y: 1},
+					{ x: 85, y: 1},
+					{ x: 90, y: 1}]
+        },{
+			marker: {
+				fillColor: 'rgba(124,181,236,1)',
+				lineWidth:0,
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 75, y: 0},
+					{ x: 80, y: 0},
+					{ x: 85, y: 0}]
+        }]
 
-	        },
-			    credits: {
-	            enabled: false
-	        },
-	        legend: {
-	            enabled: false
-	        },
-	        plotOptions: {
-	            series: {
-	                borderWidth: 0,
-	                dataLabels: {
-	                    enabled: true,
-	                    format: '{point.y:.1f}%'
-	                }
-	            }
-	        },
-
-	        series: [{
-	            name: 'Buyer Share',
-	            colorByPoint: true,
-	            data: [{
-	                name: 'Male',
-	                y: 24.03
-	            }, {
-	                name: 'Female',
-	                y: 10.38,
-	                color: "#F15C80"
-	            }]
-	        }]
-	    });
-	});
-	</script>
+    };
+	 $('.dot_chart1').highcharts(dot_opts);
+	 
+	 dot_opts.yAxis.categories=["B2C GMV","C2C GMV"];
+	 dot_opts.yAxis.max=1;
+	 dot_opts.series=new Array({
+			marker: {
+				fillColor: 'rgba(24,108,187,1)',
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 75, y: 1},
+					{ x: 80, y: 1}]
+        },{
+			marker: {
+				fillColor: 'rgba(124,181,236,1)',
+				lineWidth:0,
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 75, y: 0},
+					{ x: 80, y: 0},
+					{ x: 85, y: 0},
+					{ x: 90, y: 0},
+					{ x: 95, y: 0}]
+        });
+	 $('.dot_chart3').highcharts(dot_opts);
+	 
+	 dot_opts.yAxis.max=3;
+	 dot_opts.yAxis.categories=["dress","bikini","swimsuit","lularoe"];
+	 dot_opts.series=new Array({
+			marker: {
+				fillColor: 'rgba(124,181,236,1)',
+				lineWidth:0,
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 5, y: 3},
+					{ x: 10, y: 3},
+					{ x: 15, y: 3},
+					{ x: 20, y: 3},
+					{ x: 25, y: 3},
+					{ x: 30, y: 3},
+					{ x: 35, y: 3},
+					{ x: 40, y: 3},
+					{ x: 45, y: 3},
+					{ x: 50, y: 3}]
+        },{
+			marker: {
+				fillColor: 'rgba(124,181,236,1)',
+				lineWidth:0,
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 5, y: 2},
+					{ x: 10, y: 2},
+					{ x: 15, y: 2},
+					{ x: 20, y: 2},
+					{ x: 25, y: 2},
+					{ x: 30, y: 2},
+					{ x: 35, y: 2},
+					{ x: 40, y: 2},
+					{ x: 45, y: 2}]
+        },{
+			marker: {
+				fillColor: 'rgba(124,181,236,1)',
+				lineWidth:0,
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 5, y: 1},
+					{ x: 10, y: 1},
+					{ x: 15, y: 1},
+					{ x: 20, y: 1},
+					{ x: 25, y: 1},
+					{ x: 30, y: 1},
+					{ x: 35, y: 1}]
+        },{
+			marker: {
+				fillColor: 'rgba(124,181,236,1)',
+				lineWidth:0,
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 5, y: 0},
+					{ x: 10, y: 0},
+					{ x: 15, y: 0},
+					{ x: 20, y: 0},
+					{ x: 25, y: 0}]
+        });
+	 $('.dot_chart2').highcharts(dot_opts);
+	 dot_opts.yAxis.categories=["lularoe","lululemon","lily pulitzer","victoria secrets"];
+	 $('.dot_chart4').highcharts(dot_opts);
+	 
+	 var bar_opts = {
+        chart: {
+            type: 'bar'
+        },
+		title: {
+		    text:null
+	    },
+        xAxis: {
+            categories: ['0-5', '5-25', '25-100']
+        },
+		credits: {
+            enabled: false
+        },
+        yAxis: {
+            gridLineWidth: 0,
+			lineWidth: 0,
+            visible: false
+        },
+		exporting: {
+		    enabled:false
+		},
+        legend: {
+            //reversed: true
+			enabled: false
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal',
+                pointWidth: 20
+            }
+        },
+        series: [{
+            name: 'Auction',
+            data: [2, 2, 1]
+        }, {
+            name: 'Fixed Price',
+            data: [9, 8, 4],
+            color:"#186CBB"
+        }]
+    };
+    $('.bar_chart1').highcharts(bar_opts);
+    $('.bar_chart3').highcharts(bar_opts);
+	$('.gender_bar').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: null
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            visible: false
+        },
+        exporting: {
+            enabled:false
+        },
+		credits: {
+            enabled: false
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.y:.1f}%'
+                }
+            }
+        },
+        series: [{
+            name: 'Buyer Share',
+            colorByPoint: true,
+            data: [{
+                name: 'Male',
+                y: 24.03
+            }, {
+                name: 'Female',
+                y: 10.38,
+                color: "#F15C80"
+            }]
+        }]
+    });
+});
+</script>
     
 </body>
 </html>
