@@ -4,8 +4,8 @@
 	 viewBox="0 0 747 922.2" style="enable-background:new 0 0 747 922.2;" xml:space="preserve">
 	 <defs>
 	  	<linearGradient id="grad_phone" x1="0%" y1="39%" x2="0%" y2="40%">
-	  		<stop offset="0%" style="stop-color:#db9ff5;stop-opacity:1" />
-	  		<stop offset="100%" style="stop-color:#9b24cd;stop-opacity:1" />
+	  		<stop offset="0%" style="stop-color:#fdc98a;stop-opacity:1" />
+	  		<stop offset="100%" style="stop-color:#fc8a00;stop-opacity:1" />
 	  	</linearGradient>
 	 </defs>
 <style type="text/css">
