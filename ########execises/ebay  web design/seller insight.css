@@ -19,6 +19,17 @@ body{
  	padding:20px;
     /*margin:auto;*/
 }
+.tab-customize-header>li>a{
+ 	padding-left:30px;
+ 	padding-right:30px;
+}
+.tab-customize-header>li.active>a,.tab-customize-header>li>a:focus,.tab-customize-header>li.active>a:focus{
+	background: #f5f5f5;
+	color:#000000;
+}
+.tab-customize-header>li.active>a:hover{
+	background: #f9f9f9;
+}
 .dashboard{
 	border: 1px solid #ddd;
 	padding:20px 20px;
@@ -26,10 +37,33 @@ body{
 	height:180px;
 }
 .dashboard1{
-	border: 1px solid #ddd;
+	border: 1px solid #ddd;	
 	padding:20px 20px;
 	background: white;
-	/*height:160px;*/
+}
+.dash_inventory{
+	/*border-top:2px solid #F15CA8;*/
+
+}
+.dash_demand{
+	/*border-top:2px solid #6accc5;*/
+
+}
+.dash_seller{
+	/*border-top:2px solid #8085E9;*/
+
+}
+.dash_buyer{
+	/*border-top:2px solid #ff724c;*/
+
+}
+.dash_product{
+	/*border-top:2px solid #c1db64;*/
+
+}
+.dash_brand{
+	/*border-top:2px solid  #43a1bc;*/
+
 }
 .health-item{
 	width:14.26%;
