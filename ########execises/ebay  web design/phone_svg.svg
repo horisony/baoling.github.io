@@ -3,9 +3,9 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 747 688" style="enable-background:new 0 0 747 688;" xml:space="preserve">
 	 <defs>
-	  	<linearGradient id="buyer_grad_phone" x1="0%" y1="39%" x2="0%" y2="40%">
-	  		<stop offset="0%" style="stop-color:#fcc49c;stop-opacity:1" />
-	  		<stop offset="100%" style="stop-color:#ff974c;stop-opacity:1" />
+	  	<linearGradient id="buyer_grad_phone" x1="0%" y1="45%" x2="0%" y2="46%">
+	  		<stop offset="0%" style="stop-color:#ffcca8;stop-opacity:1" />
+	  		<stop offset="100%" style="stop-color:#ffa869;stop-opacity:1" />
 	  	</linearGradient>
 	 </defs>
 <style type="text/css">

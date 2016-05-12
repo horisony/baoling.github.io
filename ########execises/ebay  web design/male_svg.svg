@@ -4,9 +4,9 @@
 	 viewBox="0 0 747 688.1" style="enable-background:new 0 0 747 688.1;" xml:space="preserve">
 
 	 <defs>
-	 	<linearGradient id="buyer_grad_male" x1="0%" y1="40%" x2="0%" y2="41%">
+	 	<linearGradient id="buyer_grad_male" x1="0%" y1="60%" x2="0%" y2="61%">
 	 		<stop offset="0%" style="stop-color:#94c6f6;stop-opacity:1" />
-	 		<stop offset="100%" style="stop-color:#4094e5;stop-opacity:1" />
+	 		<stop offset="100%" style="stop-color:#57a6f3;stop-opacity:1" />
 	 	</linearGradient>
 	 </defs>
 

@@ -5,41 +5,24 @@ body{
 .clear{
 	clear:both;
 }
-.large-area{
-	padding:20px;
-	border-top:none;
-	border-left: 1px solid #ddd;
-	border-right: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	background:#f5f5f5;
-}
 
 .content-area{
 	width:100%;
  	padding:20px;
     /*margin:auto;*/
 }
-.tab-customize-header>li>a{
- 	padding-left:30px;
- 	padding-right:30px;
-}
-.tab-customize-header>li.active>a,.tab-customize-header>li>a:focus,.tab-customize-header>li.active>a:focus{
-	background: #f5f5f5;
-	color:#000000;
-}
-.tab-customize-header>li.active>a:hover{
-	background: #f9f9f9;
-}
+
 .dashboard{
-	border: 1px solid #ddd;
-	padding:20px 20px;
+	border: 1px solid #eee;
+	/*padding:20px 20px;*/
 	background: white;
 	height:180px;
 }
 .dashboard1{
-	border: 1px solid #ddd;	
-	padding:20px 20px;
-	background: white;
+	border: 1px solid #eee;	
+	/*padding:20px 20px;*/
+	background: #f9f9f9;
+	margin-top: 20px;
 }
 .dash_inventory{
 	/*border-top:2px solid #F15CA8;*/
@@ -65,6 +48,7 @@ body{
 	/*border-top:2px solid  #43a1bc;*/
 
 }
+
 .health-item{
 	width:14.26%;
 	float:left;
@@ -76,10 +60,21 @@ body{
 }
 .item-text{
 	font-size:1.2em;
+	color:#666;
 }
 .dashboard-header
 {
 	font-size:1.2em;
+	background: #f9f9f9;
+	padding:0px 20px;
+	height:40px;
+	line-height: 40px;
+}
+.dashboard>.dashboard-body{
+	padding:12px 20px  20px 20px;
+}
+.dashboard1>.dashboard-body{
+	padding:0 20px  20px 20px;
 }
 .dashboard-title{
 	float:left;
@@ -90,6 +85,7 @@ body{
 	float:right;
 	text-decoration: underline;
 	color:#337ab7;
+	font-size:.85em;
 }
 .dashboard-more:hover{
 	color:#34abff;
@@ -114,12 +110,15 @@ body{
 	text-align: center;
 	color:#444;
 	padding-right:0;
+	padding-top: 6px;
 } 
 .tab-customize li a{
-	padding:0 16px 5px 16px;
-	border:none;
+	margin-top: 5px;
+	padding:7px 16px 6px 16px;
+	font-size:.85em;
+/*	border:none;
 	color:#666;
-	font-size:.9em;
+	font-size:.9em;*/
 }
 
 .dashboard-tabs{
@@ -130,7 +129,8 @@ body{
 	padding-left:24%;
 	float:left;
 }
-.tab-customize>li>a:hover{
+/*underline_tab style*/
+/*.tab-customize>li>a:hover{
 	background: none;
 	border:none;
 	color:#0096ff;
@@ -145,7 +145,7 @@ body{
 	border:none;
 	border-bottom: 2px solid #0096ff;
 	color:#0096ff;	
-}
+}*/
 .imgs{
 	text-align: center;
 }
