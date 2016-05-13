@@ -5,9 +5,10 @@
 	<meta http-equiv="content-type"  content="text/html; charset=utf-8">  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Copatible" content="IE=edge">
-    <link href="http://gro.corp.ebay.com/gro/resources/css/bootstrap.min.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="seller insight.css">
-    <link href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://gro.corp.ebay.com/gro/resources/css/bootstrap.min.css" rel="stylesheet" /> 
+    <link rel="stylesheet" href="seller insight.css" />
+    <link href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet"/> 
 	<script src="http://gro.corp.ebay.com/gro/resources/js/lib/jquery-1.11.2.js"></script> 
     <script type="text/javascript" src="http://gro.corp.ebay.com/gro/resources/js/lib/bootstrap.min.js"></script> 
     <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -30,15 +31,15 @@
 		  <li role="presentation"><a data-toggle="tab" href="#CBT">CBT</a></li>
 		</ul>
 
-		<div class="tab-content ">
+		<div class="tab-content">
 		  <div id="Summary" class="tab-pane fade in active">
-		  	<div class="dashboard1">
-			  	<header class="dashboard-header">
+		  	<div class="dashboard health-dash">
+			  	<header >
 			  		<span class="dashboard-title">Health</span>
 			  		<a href="#"><span class="dashboard-more">more</span></a>
 			  		<div class="clear"></div>
 			  	</header>
-			  	<div class="dashboard-body">
+			  	<div class="clearfix">
 			  		<div class="health-item">
 			  			<h3>$40.34M</h3> <span class="item-text">GMV</span>
 			  		</div>
@@ -65,21 +66,20 @@
 			  	</div>
 
 		  	</div>
-		  	<div class="two-col-dash">
+		  	<div class="col-xs-12">
 		  		<div class="col-left">
-				  	<div class="dashboard dash_inventory">
-				  		<header class="dashboard-header">
-					  		<span class="dashboard-title">Inventory</span>
-					  		<a href="#"><span class="dashboard-more">more</span></a>
-					  		<div class="clear"></div>
+				  	<div class="dashboard">
+				  		<header>
+					  		<span >Inventory</span>
+					  		<a href="#">more</a>
 					  	</header>
-					  	<div class="dashboard-body">
+					  	<div class="dash-body clearfix">
 			  		
-			  				<div class="col-md-3 data-text" style="height:120px;">
+			  				<div class="col-xs-3 data-text">
 			  					<h3>2.34M</h3><span class="item-text">Total Listings</span>
 			  				</div>
-			  				<div class="dot_chart1 col-md-4" style="height:120px;"></div>
-			  				<div class="bar_chart1 col-md-5" style="height:120px;"></div>
+			  				<div class="col-xs-4 dot_chart1 " style="height:140px; padding-top: 20px"></div>
+			  				<div class="col-xs-5 bar_chart1 " style="height:140px; padding-top: 20px"></div>
 
 						<div class="clear"></div>
 					  	</div>
@@ -87,35 +87,36 @@
 				  	</div>
 			  	</div>
 			  	<div class="col-right">
-				  	<div class="dashboard dash_demand">
-				  		<header class="dashboard-header">
+				  	<div class="dashboard">
+				  		<header >
 					  		<span class="dashboard-title">Demand</span>
-					  		<span class="dashboard-tabs">
-					  			<ul class="nav nav-tabs tab-customize">
-			  					  <li role="presentation" class="active"><a data-toggle="tab" href="#Top_KW">Top KW</a></li>
-			  					  <li role="presentation"><a data-toggle="tab" href="#Top_Movers">Top Movers</a></li>
-			  					  <li role="presentation"><a data-toggle="tab" href="#Seasonal_KW">Seasonal KW</a></li>
-			  					</ul>
-			  				</span>
+					  		
 					  		<a href="#"><span class="dashboard-more">more</span></a>
 					  		<div class="clear"></div>
 					  	</header>
-					  	<div class="dashboard-body">
-					  		<div class="col-md-3 data-text" style="height:120px;">
+					  	<div class="dash-body clearfix">
+					  		<div class="col-md-3 data-text" >
 			  					<h3>54.1M</h3><span class="item-text">Searches</span>
 			  				</div>
-			  				<div class="dot_chart col-md-9" style="height:120px;">
-			  					
-			  					<div class="tab-content ">
-			  					  <div id="Top_KW" class="tab-pane fade in active">
-			  					  	<div class="dot_chart2 col-md-11" style="height:120px;"></div>
-			  					  </div>
-			  					  <div id="Top_Movers" class="tab-pane fade">
-			  					  	<span style="line-height: 800%;margin-left: 100px;">not available</span>
-			  					  </div>
-			  					  <div id="Seasonal_KW" class="tab-pane fade">
-			  					  	<span style="line-height: 800%;margin-left: 100px;">not available</span>
-			  					  </div>
+			  				<div class="col-md-9">
+			  					<header>
+			  						<ul class="nav nav-tabs tab-customize ">
+			  							<li role="presentation" class="active"><a data-toggle="tab" href="#Top_KW">Top KW</a></li>
+			  							<li role="presentation"><a data-toggle="tab" href="#Top_Movers">Top Movers</a></li>
+			  							<li role="presentation"><a data-toggle="tab" href="#Seasonal_KW">Seasonal KW</a></li>
+			  						</ul>
+			  					</header>
+
+			  					<div class="tab-content col-xs-11">
+			  						<div id="Top_KW" class="tab-pane fade in active">
+			  							<div class="dot_chart2 " style="height:120px;"></div>
+			  						</div>
+			  						<div id="Top_Movers" class="tab-pane fade">
+			  							<span style="line-height: 800%;margin-left: 100px;">not available</span>
+			  						</div>
+			  						<div id="Seasonal_KW" class="tab-pane fade">
+			  							<span style="line-height: 800%;margin-left: 100px;">not available</span>
+			  						</div>
 			  					</div>
 
 			  				</div>
@@ -128,21 +129,21 @@
 			  	<div class="clear"></div>
 			</div>
 
-		  	<div class="two-col-dash">
+		  	<div class="col-xs-12">
 		  		<div class="col-left">
-				  	<div class="dashboard dash_seller">
-				  		<header class="dashboard-header">
+				  	<div class="dashboard">
+				  		<header >
 					  		<span class="dashboard-title">Seller</span>
 					  		<a href="#"><span class="dashboard-more">more</span></a>
 					  		<div class="clear"></div>
 					  	</header>
-					  	<div class="dashboard-body">
+					  	<div class="dash-body clearfix">
 			  		
-			  				<div class="col-md-3 data-text" style="height:120px;">
+			  				<div class="col-xs-3 data-text">
 			  					<h3>231.4K</h3><span class="item-text">Sellers</span>
 			  				</div>
-			  				<div class="dot_chart3 col-md-4" style="height:120px;"></div>
-			  				<div class="bar_chart3 col-md-5" style="height:120px;"></div>
+			  				<div class="dot_chart3 col-xs-4" style="height:120px; margin-top: 20px;"></div>
+			  				<div class="bar_chart3 col-xs-5" style="height:120px; margin-top: 20px;"></div>
 
 						<div class="clear"></div>
 					  	</div>
@@ -150,49 +151,46 @@
 				  	</div>
 			  	</div>
 			  	<div class="col-right">
-				  	<div class="dashboard dash_buyer">
-				  		<header class="dashboard-header">
+				  	<div class="dashboard">
+				  		<header >
 					  		<span class="dashboard-title">Buyer</span>					  
 					  		<a href="#"><span class="dashboard-more">more</span></a>
 					  		<div class="clear"></div>
 					  	</header>
-					  	<div class="dashboard-body">
-					  		<div class="col-md-4 imgs" style="height:120px;">
-			  					<div class="col-md-6 ">
+					  	<div class="dash-body clearfix">
+					  		<div class="col-xs-4 imgs">
+			  					<div class="col-xs-6 ">
 			  					<div class="imgs_left">
-				  					<embed src="male_svg.svg" width="70" height="70" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><span><small style="color:#666;">Male</small><br/>51.2%</span>
+				  					<embed src="male_svg.svg" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><span><small style="color:#666;">Male</small><br/>51.2%</span>
 			  					</div>
 			  					</div>
-			  					<div class="col-md-6">
+			  					<div class="col-xs-6">
 			  					<div class="imgs_right">
-				  					<embed src="female_svg.svg" width="70" height="70" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><span><small style="color:#666;">Female</small><br/>42.5%</span>
+				  					<embed src="female_svg.svg" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><span><small style="color:#666;">Female</small><br/>42.5%</span>
 			  					</div></div>
 			  				</div>
-					  		<div class="col-md-4 imgs" style="height:120px;">
-			  					<div class="col-md-6 ">
+					  		<div class="col-xs-4 imgs">
+			  					<div class="col-xs-6 ">
 			  					<div class="imgs_left2">
 				  					<span class="txt-center"><embed src="phone_svg.svg" width="70" height="70" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><span><small style="color:#666;">Phone</small><br/>51.1%</span></span>
 			  					</div>
 			  					</div>
-			  					<div class="col-md-6">
+			  					<div class="col-xs-6">
 			  					<div class="imgs_right2">
 				  					<embed src="computer_svg.svg" width="70" height="70" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><span><small style="color:#666;">Computer</small><br/>42.2%</span>
 			  					</div></div>
 			  				</div>
-			  				<div class="col-md-4 imgs" style="height:120px;">
-			  					<div class="col-md-6 ">
+			  				<div class="col-xs-4 imgs">
+			  					<div class="col-xs-6 ">
 			  					<div class="imgs_left3">
 				  					<span class="txt-center"><embed src="shopping_svg.svg" width="70" height="70" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><span><small style="color:#666; display: inline-block;line-height: 120%">Shopping Enthusiast</small><br/>51.1%</span></span>
 			  					</div>
 			  					</div>
-			  					<div class="col-md-6">
+			  					<div class="col-xs-6">
 			  					<div class="imgs_right3">
 				  					<embed src="hunter_svg.svg" width="70" height="70" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><span><small style="color:#666; display: inline-block;line-height: 120%">Treasure Hunter</small><br/>42.2%</span>
 			  					</div></div>
 			  				</div>
-
-			  				
-			  			
 			  			<div class="clear"></div>
 					  	</div>
 				  		
@@ -201,35 +199,35 @@
 			  	<div class="clear"></div>
 			</div>
 
-		  	<div class="two-col-dash">
+		  	<div class="col-xs-12">
 		  		<div class="col-left">
-				  	<div class="dashboard dash_product">
-				  		<header class="dashboard-header">
+				  	<div class="dashboard">
+				  		<header >
 					  		<span class="dashboard-title">Product</span>
-					  		<span class="dashboard-tabs2">
-					  			<ul class="nav nav-tabs tab-customize">
-			  					  <li role="presentation" class="active"><a data-toggle="tab" href="#Top_Product">Top Product</a></li>
-			  					  <li role="presentation"><a data-toggle="tab" href="#Top_Movers_Product">Top Movers</a></li>
-			  					</ul>
-			  				</span>
+					  		
 					  		<a href="#"><span class="dashboard-more">more</span></a>
 					  		<div class="clear"></div>
 					  	</header>
-					  	<div class="dashboard-body">
-					  		<div class="col-md-3 data-text" style="height:120px;">
+					  	<div class="dash-body clearfix">
+					  		<div class="col-xs-3 data-text" >
 			  					<h3>34.1%</h3><span class="item-text">Product ID Coverage</span>
 			  				</div>
-			  				<div class="dot_chart col-md-9" style="height:120px;">
-			  					
-			  					<div class="tab-content ">
-			  					  <div id="Top_Product" class="tab-pane fade in active">
-			  					  	<span style="line-height: 800%;margin-left: 100px;">not available</span>
-			  					  </div>
-			  					  <div id="Top_Movers_Product" class="tab-pane fade">
-			  					  	<span style="line-height: 800%;margin-left: 100px;">not available</span>
-			  					  </div>
-
+			  				<div class="dot_chart col-xs-9" style="height:120px;">
+			  				<header>
+			  					<ul class="nav nav-tabs tab-customize">
+			  						<li role="presentation" class="active"><a data-toggle="tab" href="#Top_Product">Top Product</a></li>
+			  						<li role="presentation"><a data-toggle="tab" href="#Top_Movers_Product">Top Movers</a></li>
+			  					</ul>
+			  				</header>
+			  				<div class="tab-content col-xs-11">
+			  					<div id="Top_Product" class="tab-pane fade in active">
+			  						<span style="line-height: 800%;margin-left: 100px;">not available</span>
 			  					</div>
+			  					<div id="Top_Movers_Product" class="tab-pane fade">
+			  						<span style="line-height: 800%;margin-left: 100px;">not available</span>
+			  					</div>
+			  				</div>					
+
 
 			  				</div>
 			  			
@@ -239,31 +237,31 @@
 				  	</div>
 			  	</div>
 			  	<div class="col-right">
-				  	<div class="dashboard dash_brand">
-				  		<header class="dashboard-header">
+				  	<div class="dashboard">
+				  		<header>
 					  		<span class="dashboard-title">Brand</span>
-					  		<span class="dashboard-tabs2">
-					  			<ul class="nav nav-tabs tab-customize">
-			  					  <li role="presentation" class="active"><a data-toggle="tab" href="#Top_Brand">Top Brand</a></li>
-			  					  <li role="presentation"><a data-toggle="tab" href="#Top_Movers_Brand">Top Movers</a></li>
-			  					</ul>
-			  				</span>
+					  		
 					  		<a href="#"><span class="dashboard-more">more</span></a>
 					  		<div class="clear"></div>
 					  	</header>
-					  	<div class="dashboard-body">
-					  		<div class="col-md-3 data-text" style="height:120px;">
+					  	<div class="dash-body clearfix">
+					  		<div class="col-xs-3 data-text" >
 			  					<h3>34.1%</h3><span class="item-text">Branded GMV Penetration</span>
 			  				</div>
-			  				<div class="dot_chart col-md-9" style="height:120px;">
-			  					
-			  					<div class="tab-content ">
-			  					  <div id="Top_Brand" class="tab-pane fade in active">
-			  					  	<div class="dot_chart4 col-md-11" style="height:120px;"></div>
-			  					  </div>
-			  					  <div id="Top_Movers_Brand" class="tab-pane fade">
-			  					  	<span style="line-height: 800%;margin-left: 100px;">not available</span>
-			  					  </div>
+			  				<div class="col-xs-9" >
+						  		<header class="dash-tab-header">
+						  			<ul class="nav nav-tabs tab-customize">
+				  					  <li role="presentation" class="active"><a data-toggle="tab" href="#Top_Brand">Top Brand</a></li>
+				  					  <li role="presentation"><a data-toggle="tab" href="#Top_Movers_Brand">Top Movers</a></li>
+				  					</ul>
+				  				</header>
+			  					<div class="tab-content col-xs-11">
+			  						<div id="Top_Brand" class="tab-pane fade in active">
+			  							<div class="dot_chart4 " style="height:120px;"></div>
+			  						</div>
+			  						<div id="Top_Movers_Brand" class="tab-pane fade">
+			  							<span style="line-height: 800%;margin-left: 100px;">not available</span>
+			  						</div>
 
 			  					</div>
 

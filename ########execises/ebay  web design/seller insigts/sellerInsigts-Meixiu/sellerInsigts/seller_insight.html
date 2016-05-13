@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Seller insight</title>
+	<meta http-equiv="content-type"  content="text/html; charset=utf-8">  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Copatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <link href="http://gro.corp.ebay.com/gro/resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="seller_insight.css"/>
+	
+	<script src="http://gro.corp.ebay.com/gro/resources/js/lib/jquery-1.11.2.js"></script> 
+    <script type="text/javascript" src="http://gro.corp.ebay.com/gro/resources/js/lib/bootstrap.min.js"></script> 
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+</head>
+<body>
+
+	<div class="content-area">
+		<ul class="nav nav-tabs">
+		  <li role="presentation" class="active"><a data-toggle="tab" href="#tab_Summary">Summary</a></li>
+		  <li role="presentation"><a data-toggle="tab" href="#tab_Health">Health</a></li>
+		  <li role="presentation"><a data-toggle="tab" href="#tab_Inventory">Inventory</a></li>
+		  <li role="presentation"><a data-toggle="tab" href="#tab_Demand">Demand</a></li>
+		  <li role="presentation"><a data-toggle="tab" href="#tab_Seller">Seller</a></li>
+		  <li role="presentation"><a data-toggle="tab" href="#tab_Buyer">Buyer</a></li>
+		  <li role="presentation"><a data-toggle="tab" href="#tab_Product">Product</a></li>
+		  <li role="presentation"><a data-toggle="tab" href="#tab_Brand">Brand</a></li>
+		  <li role="presentation"><a data-toggle="tab" href="#tab_CBT">CBT</a></li>
+		</ul>
+
+		<div class="tab-content ">
+		  <div id="tab_Summary" class="tab-pane fade in active row clearfix">
+		  	<div class="dashboard col-xs-12">
+			  	<header class="dashboard-header">
+			  		<span>Health</span>
+			  		<a href="#">more</a>
+			  	</header>
+			  	<div class="dashboard-body clearfix">
+			  		<div>
+			  			<h3>$40.34M</h3> <span>GMV</span>
+			  		</div>
+			  		<div>
+			  			<h3 class="increase-decrease-number">+13.23%</h3> <span>GMV YoY</span>
+			  		</div>
+			  		<div>
+			  			<h3>$5.12M</h3> <span>Revenue</span>
+			  		</div>
+			  		<div>
+			  			<h3>2.17M</h3> <span>Transactions</span>
+			  		</div>
+			  		<div>
+			  			<h3>$32.01</h3> <span>ASP</span>
+			  		</div>
+			  		<div>
+			  			<h3>$2.21M</h3> <span>Subsidy</span>
+			  		</div>
+			  		<div>
+			  			<h3>$5.11M</h3> <span>Deals GMV</span>
+			  		</div>
+
+			  	</div>
+
+		  	</div>
+			<div class="dashboard col-xs-6">
+				<header class="dashboard-header">
+					<span>Inventory</span>
+					<a href="#">more</a>
+				</header>
+				<div class="dashboard-body clearfix">
+			
+					<div class="col-xs-3">
+						<h3>2.34M</h3><span>Total Listings</span>
+					</div>
+					<div class="dot_chart1 col-xs-3"></div>
+					<div class="bar_chart1 col-xs-6"></div>
+
+				</div>
+				
+			</div>
+			<div class="dashboard col-xs-6">
+				<header class="dashboard-header">
+						<a href="#">more</a>
+					<span>Demand</span>
+						<ul class="nav nav-tabs">
+						  <li role="presentation" class="active"><a data-toggle="tab">Top KW</a></li>
+						  <li role="presentation"><a data-toggle="tab">Top Movers</a></li>
+						  <li role="presentation"><a data-toggle="tab">Seasonal KW</a></li>
+						</ul>
+				</header>
+				<div class="dashboard-body clearfix">
+					<div class="col-xs-3">
+						<h3>54.1M</h3><span>Searches</span>
+					</div>
+					<div class="dot_chart2 col-xs-7"></div>
+				
+				</div>
+				
+			</div>
+
+			<div class="dashboard col-xs-6">
+				<header class="dashboard-header">
+					<span>Seller</span>
+					<a href="#">more</a>
+				</header>
+				<div class="dashboard-body clearfix">
+			
+					<div class="col-xs-3">
+						<h3>231.4K</h3><span>Sellers</span>
+					</div>
+					<div class="dot_chart3 col-xs-3"></div>
+					<div class="col-xs-6" style="padding:0;">
+						<div class="bar_chart2"></div>
+						<div class="bar_chart3"></div>
+					</div>
+
+				</div>
+				
+			</div>
+			<div class="dashboard col-xs-6">
+				<header class="dashboard-header">
+					<span>Buyer</span>					  
+					<a href="#">more</a>
+				</header>
+				<div class="dashboard-body clearfix" style="text-align:center;padding-top:10px;">
+					<div class="col-xs-4">
+						<div class="svg-container">
+							<embed src="male_svg.svg" width="70" height="80" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><span><small>Male</small><br/>51.2%</span>
+						</div>
+						<div class="svg-container">
+							<embed src="female_svg.svg" width="70" height="80" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><span><small>Female</small><br/>42.5%</span>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="svg-container">
+							<object data="phone_svg.svg" id="embed_phone" width="70" height="80" type="image/svg+xml" ></object><span><small>Phone</small><br/>51.1%</span>
+						</div>
+						<div class="svg-container">
+							<embed src="computer_svg.svg" width="70" height="80" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><span><small>Computer</small><br/>42.2%</span>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="svg-container">
+							<span><embed src="shopping_svg.svg" width="70" height="80" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><span><small>Shopping Enthusiast</small><br/>51.1%</span></span>
+						</div>
+						<div class="svg-container">
+							<embed src="hunter_svg.svg" width="70" height="80" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><span><small>Treasure Hunter</small><br/>42.2%</span>
+						</div>
+					</div>
+
+					
+				
+				</div>
+				
+			</div>
+
+				<div class="dashboard col-xs-6" style="padding-bottom:20px">
+					<header class="dashboard-header">
+						<a href="#">more</a>
+						<span>Product</span>
+							<ul class="nav nav-tabs">
+							  <li role="presentation" class="active"><a data-toggle="tab">Top Product</a></li>
+							  <li role="presentation"><a data-toggle="tab">Top Movers</a></li>
+							</ul>
+					</header>
+					<div class="dashboard-body clearfix">
+						<div class="col-xs-3">
+							<h3>34.1%</h3><span>Product ID Coverage</span>
+						</div>
+							
+							<div class="tab-content"  style="height:130px; padding:30px 50px; font-size:2em;color:#999">
+							  <div class="tab-pane fade in active">
+								<span>not available</span>
+							  </div>
+							</div>
+					
+					</div>
+					
+				</div>
+				<div class="dashboard col-xs-6" style="padding-bottom:20px">
+					<header class="dashboard-header">
+						<a href="#">more</a>
+						<span>Brand</span>
+							<ul class="nav nav-tabs">
+							  <li role="presentation" class="active"><a data-toggle="tab">Top Brand</a></li>
+							  <li role="presentation"><a data-toggle="tab">Top Movers</a></li>
+							</ul>
+					</header>
+					<div class="dashboard-body clearfix">
+						<div class="col-xs-3">
+							<h3>34.1%</h3><span>Branded GMV Penetration</span>
+						</div>
+						<div class="dot_chart4 col-xs-7"></div>
+					
+					</div>
+					
+				</div>
+		  </div>
+		  <div id="tab_Health" class="tab-pane fade">Health Content</div>
+		  <div id="tab_Inventory" class="tab-pane fade">Inventory Content</div>
+		  <div id="tab_Demand" class="tab-pane fade">Demand Content</div>
+		  <div id="tab_Seller" class="tab-pane fade">Seller Content</div>
+		  <div id="tab_Buyer" class="tab-pane fade">Buyer Content</div>
+		  <div id="tab_Product" class="tab-pane fade">Product Content</div>
+		  <div id="tab_Brand" class="tab-pane fade">Brand Content</div>
+		  <div id="tab_CBT" class="tab-pane fade">CBT Content</div>
+
+		</div>
+
+		
+
+	</div>
+	<script type="text/javascript" >
+$(function () {
+//load SVG percentage for Phone
+$(window).load(function () {
+	//make sure Document loaded, including svg
+	var x = document.getElementById("embed_phone");
+	var svgDoc = (x.contentWindow || x.contentDocument);; //get the inner DOM of svg file
+	var def = svgDoc.getElementById("defDiv_phone"); //get the inner element by id
+	def.innerHTML = '<linearGradient id="buyer_grad_phone" x1="0%" y1="45%" x2="0%" y2="46%"><stop offset="0%" style="stop-color:#ffcca8;stop-opacity:1" /><stop offset="100%" style="stop-color:#ffa869;stop-opacity:1" /></linearGradient>';
+	svgDoc.getElementById("pathDiv_phone").setAttribute('fill','url(#buyer_grad_phone)');
+});
+	
+//start hightcharts
+var dot_opts = {
+        chart: {
+            type: 'bubble',
+            plotBorderWidth: 0,
+            zoomType: 'xy'
+        },
+        legend: {
+            enabled: false
+        },
+		credits: {
+            enabled: false
+        },
+        title: {
+            text: null
+        },
+        exporting: {
+            enabled:false
+        },
+        tooltip: {
+            enabled:false
+        },
+        xAxis: {
+            gridLineWidth: 0,
+            visible: false
+        },
+        yAxis: {
+            gridLineWidth: 0,
+			min:0,
+			max:1,
+            title: {
+                text: null
+            },
+            categories: ["Fixed Price","Auction"]
+        },
+        plotOptions: {
+            bubble: {
+                lineWidth: 0,
+                minSize: 8,
+                maxSize: 8
+            }
+        },
+        series: [{
+			marker: {
+				fillColor: 'rgba(81,144,204,1)',
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 75, y: 1},
+					{ x: 80, y: 1},
+					{ x: 85, y: 1},
+					{ x: 90, y: 1},
+					{ x: 95, y: 1},
+					{ x: 100, y: 1},
+					{ x: 105, y: 1}]
+        },{
+			marker: {
+				fillColor: 'rgba(124,181,236,1)',
+				lineWidth:0,
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 75, y: 0},
+					{ x: 80, y: 0},
+					{ x: 85, y: 0}]
+        }]
+
+    };
+	 $('.dot_chart1').highcharts(dot_opts);
+	 
+	 dot_opts.yAxis.categories=["B2C GMV","C2C GMV"];
+	 dot_opts.yAxis.max=1;
+	 dot_opts.series=new Array({
+			marker: {
+				fillColor: 'rgba(81,144,204,1)',
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 75, y: 1},
+					{ x: 80, y: 1}]
+        },{
+			marker: {
+				fillColor: 'rgba(124,181,236,1)',
+				lineWidth:0,
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 75, y: 0},
+					{ x: 80, y: 0},
+					{ x: 85, y: 0},
+					{ x: 90, y: 0},
+					{ x: 95, y: 0},
+					{ x: 100, y: 0},
+					{ x: 105, y: 0},
+					{ x: 110, y: 0},
+					{ x: 115, y: 0}]
+        });
+	 $('.dot_chart3').highcharts(dot_opts);
+	 
+	 dot_opts.yAxis.max=3;
+	 dot_opts.yAxis.categories=["dress","bikini","swimsuit","lularoe"];
+	 dot_opts.series=new Array({
+			marker: {
+				fillColor: 'rgba(124,181,236,1)',
+				lineWidth:0,
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 5, y: 3},
+					{ x: 10, y: 3},
+					{ x: 15, y: 3},
+					{ x: 20, y: 3},
+					{ x: 25, y: 3},
+					{ x: 30, y: 3},
+					{ x: 35, y: 3},
+					{ x: 40, y: 3},
+					{ x: 45, y: 3},
+					{ x: 50, y: 3},
+					{ x: 55, y: 3},
+					{ x: 60, y: 3},
+					{ x: 65, y: 3},
+					{ x: 70, y: 3},
+					{ x: 75, y: 3},
+					{ x: 80, y: 3},
+					{ x: 85, y: 3},
+					{ x: 90, y: 3},
+					{ x: 95, y: 3},
+					{ x: 100, y: 3},
+					{ x: 105, y: 3}]
+        },{
+			marker: {
+				fillColor: 'rgba(124,181,236,1)',
+				lineWidth:0,
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 5, y: 2},
+					{ x: 10, y: 2},
+					{ x: 15, y: 2},
+					{ x: 20, y: 2},
+					{ x: 25, y: 2},
+					{ x: 30, y: 2},
+					{ x: 35, y: 2},
+					{ x: 40, y: 2},
+					{ x: 45, y: 2}]
+        },{
+			marker: {
+				fillColor: 'rgba(124,181,236,1)',
+				lineWidth:0,
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 5, y: 1},
+					{ x: 10, y: 1},
+					{ x: 15, y: 1},
+					{ x: 20, y: 1},
+					{ x: 25, y: 1},
+					{ x: 30, y: 1},
+					{ x: 35, y: 1}]
+        },{
+			marker: {
+				fillColor: 'rgba(124,181,236,1)',
+				lineWidth:0,
+				fillOpacity: 1
+			},
+			data: [
+					{ x: 5, y: 0},
+					{ x: 10, y: 0},
+					{ x: 15, y: 0},
+					{ x: 20, y: 0},
+					{ x: 25, y: 0}]
+        });
+	 $('.dot_chart2').highcharts(dot_opts);
+	 
+	 dot_opts.yAxis.categories=["lularoe","lululemon","lily pulitzer","victoria secrets"];
+	 $('.dot_chart4').highcharts(dot_opts);
+	 
+	 var bar_opts = {
+        chart: {
+            type: 'bar'
+        },
+		title: {
+		    text:null
+	    },
+        xAxis: {
+            categories: ['0-5', '5-25', '25-100']
+        },
+		credits: {
+            enabled: false
+        },
+        yAxis: {
+            gridLineWidth: 0,
+			lineWidth: 0,
+            visible: false
+        },
+		exporting: {
+		    enabled:false
+		},
+        legend: {
+            //reversed: true
+			enabled: false
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal',
+                pointWidth: 18
+            }
+        },
+        series: [{
+            name: 'Auction',
+            data: [2, 2, 1]
+        }, {
+            name: 'Fixed Price',
+            data: [9, 8, 4],
+            color:"#5190cc"
+        }]
+    };
+    $('.bar_chart1').highcharts(bar_opts);
+	
+	 bar_opts.plotOptions.series.pointWidth=16;
+	 bar_opts.xAxis.categories=["Growers","Decliners"];
+	 bar_opts.series=new Array({
+            name: 'C2C GMV',
+            data: [3, 2]
+        }, {
+            name: 'B2C GMV',
+            data: [7, 7],
+            color:"#5190cc"
+        });
+    $('.bar_chart2').highcharts(bar_opts);
+	
+	 bar_opts.xAxis.categories=["New","Lost"];
+	 bar_opts.series=new Array({
+            name: 'C2C GMV',
+            data: [ 2, 2]
+        }, {
+            name: 'B2C GMV',
+            data: [5, 6],
+            color:"#5190cc"
+        });
+    $('.bar_chart3').highcharts(bar_opts);	
+});
+</script>
+    
+</body>
+</html>
