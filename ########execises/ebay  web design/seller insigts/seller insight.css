@@ -19,55 +19,26 @@ body{
 
 .dashboard{
 	border: 1px solid #efefef;
-	/*padding:20px 20px;*/
 	background: white;
-	height:180px;
-}
-.dashboard1{
-	border: 1px solid #efefef;	
-	/*padding:20px 20px;*/
-	background: #f9f9f9;
 	margin-top: 20px;
+	height:220px;
 }
-.dash_inventory{
-	/*border-top:2px solid #F15CA8;*/
-
-}
-.dash_demand{
-	/*border-top:2px solid #6accc5;*/
-
-}
-.dash_seller{
-	/*border-top:2px solid #8085E9;*/
-
-}
-.dash_buyer{
-	/*border-top:2px solid #ff724c;*/
-
-}
-.dash_product{
-	/*border-top:2px solid #c1db64;*/
-
-}
-.dash_brand{
-	/*border-top:2px solid  #43a1bc;*/
-
+.health-dash{
+	height:160px;
 }
 
 .health-item{
 	width:14.26%;
 	float:left;
 	text-align: center;
-	color:#444;
 }
 .increase-decrease-number{
 	color:#00b000;
 }
 .item-text{
-	font-size:1em;
 	color:#666;
 }
-.dashboard-header
+.dashboard>header
 {
 	font-size:1.2em;
 	background: #f9f9f9;
@@ -75,39 +46,45 @@ body{
 	height:40px;
 	line-height: 40px;
 }
-.dashboard1>.dashboard-header
-{
-	padding-top: 16px;
-	padding-bottom: 0px;
-	line-height: 100%;
-	height:32px;
-}
-.dashboard>.dashboard-body{
-	padding:12px 20px  20px 20px;
-}
-.dashboard1>.dashboard-body{
-	padding:0px 20px  20px 20px;
-}
-.dashboard-title{
+
+.dashboard>header>span{
 	float:left;
 	font-weight: bold;
 	color:#7d7d7d;
 	font-size:1em;
 }
-.dashboard-more{
+.dashboard>header>a{
 	float:right;
 	text-decoration: underline;
 	color:#337ab7;
 	font-size:.85em;
 }
-.dashboard-more:hover{
+.dashboard>header>a:hover{
 	color:#34abff;
 }
-.two-col-dash{
-	margin-top: 12px;
-	/*height: 200px;*/
+.dash-body{
+	padding:12px 5%  20px 5%;
 }
 
+/*.dashboard>body{
+	padding:12px 5%  20px 5%;
+}*/
+.dashboard>div.clearfix{
+	padding:12px 20px  20px 20px;
+}
+
+.col-xs-12{
+	padding-left:0;
+	padding-right:0;
+}
+.col-xs-6{
+	padding-left:5%;
+	padding-right:5%;
+}
+/*.col-xs-4{
+	padding-left:10%;
+	padding-right:10%;
+}*/
 .col-left{
 	width:50%;
 	float:left;
@@ -121,30 +98,28 @@ body{
 
 .data-text{
 	text-align: center;
-	color:#444;
 	padding-right:0;
 	padding-left:0;
-	padding-top: 6px;
+	padding-top: 26px;
 } 
+.dash-tab-header{
+	background: #f9f9f9;
+}
+.tab-customize{
+	margin-left:12%;
+	width:auto;
+	float:left;
+}
 .tab-customize li a{
-	margin-top: 5px;
-	padding:7px 20px 6px 20px;
+	/*margin-top: 5px;*/
+	padding:14px 20px 4px 20px;
 	font-size:.85em;
-/*	border:none;
+	border:none;
 	color:#666;
-	font-size:.9em;*/
+	font-size:.9em;
 }
 
-.dashboard-tabs{
-	padding-left:20%;
-	float:left;
-}
-.dashboard-tabs2{
-	padding-left:24%;
-	float:left;
-}
-/*underline_tab style*/
-/*.tab-customize>li>a:hover{
+.tab-customize>li>a:hover{
 	background: none;
 	border:none;
 	color:#0096ff;
@@ -154,22 +129,25 @@ body{
 	border:none;
 	border-bottom: 2px solid #007acf;
 	color:#007acf;
+	background: none;
 }
 .tab-customize>li.active>a:hover{
 	border:none;
 	border-bottom: 2px solid #0096ff;
-	color:#0096ff;	
-}*/
+	color:#0096ff;
+	background: none;	
+}
 .imgs{
 	text-align: center;
+	margin-top:14px;
 }
 .imgs_left{
-	width:40px;
+	width:80px;
 	text-align: center;
 	float:right;
 }
 .imgs_right{
-	width:50px;
+	width:80px;
 	text-align: center;
 	float:left;
 }
@@ -207,6 +185,6 @@ body{
 .highcharts-axis-labels, .highcharts-yaxis-labels{
 	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.col-md-6>embed>span>small{
+.col-xs-6>embed>span>small{
 	color:#666;
 }
