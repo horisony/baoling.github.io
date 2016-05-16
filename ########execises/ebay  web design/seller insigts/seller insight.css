@@ -24,9 +24,9 @@ body{
 	margin-top: 12px;
 }
 .health-dash{
-	height:150px;
-	margin-top: 20px;
-	margin-bottom: 0;
+	height:110px;
+	padding:0px 1.2% 12px 1.2%;
+	text-align:center;
 }
 
 .health-item{
