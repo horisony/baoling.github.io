@@ -113,6 +113,76 @@
 	      -webkit-flex: 2;
 	              flex: 2;
 	    }
+	    .flex3 {
+	      -webkit-flex: 1;
+	              flex: 1;
+	      padding:20px 0;
+	      height:100px;
+	      background-image: url(./imgs/pic2.png);
+	      background-size:cover;
+	      background-position:center center;
+		}
+	    .rows{
+	    	/*两端对齐（作用于容器）*/
+	    	justify-content: space-around;
+	    	-webkit-justify-content: space-around;
+
+	    	/*侧轴方向对齐方式（作用于容器）*/
+	    	align-items: flex-end;
+	    	-webkit-align-items: flex-end;
+	    	/*换行（作用于容器）*/
+	    	flex-wrap: wrap;
+	    }
+	    .flex4 {
+	      -webkit-flex: 2;
+	              flex: 2;
+	      min-height:100px;
+	      /*width:25%;*/
+	      background-image: url(./imgs/pic2.png);
+	      background-size:cover;
+	      background-position:center center;
+	    }
+	    .clear{
+	    	clear:both;
+	    }
+	    .contain_box{
+	    	width:100%;
+	    	margin:20px auto;
+	    	padding:10px 0 20px 0;
+	    	background:#f9f9f9;
+	    	border:1px solid #ddd;
+	    }
+	    .respon_width {
+	    	padding-bottom:8px;
+	    	border-left:1px solid #ddd;
+	    	float:left;
+	    	text-align: center;
+		}
+		.respon_width>span{
+			color:#666;
+			padding-bottom: 8px;
+		}
+
+	    @media only screen and (min-width: 800px){
+		    .respon_width {
+		      /*min-width:25%;*/
+		      width:25%;
+
+		    }
+	    }
+
+        @media only screen and (min-width: 565px) and (max-width: 799px){
+    	    .respon_width {
+    	      min-width:50%;
+
+    	    }
+        }
+        @media only screen and (max-width: 564px){
+    	    .respon_width {
+    	      min-width:100%;
+
+    	    }
+        }
     </style>
 </head>
 <body>
@@ -182,6 +252,31 @@
 		<section class="flex1" style="background:grey;"></section>
 		<section class="none2"></section>
 		<!-- <section class="flex1">sdfteytsfvdfcse</section> -->
+	</div>
+
+	<div class="container">
+		
+		<section class="flex3" style="background:grey;">23111111111123</section>
+		<section class="flex3" style="background:grey;">232</section>
+		<section class="flex3" style="background:grey;">23`</section>
+		<section class="flex3" style="background:grey;">2</section>
+		<!-- <section class="flex1">sdfteytsfvdfcse</section> -->
+	</div>
+
+	<div class="container rows">	
+		<section class="flex4" style="background:grey;"><h3>34,890 </h3>Page Views ?</section>
+		<section class="flex4" style="background:grey;"><h3>7,940 </h3>In Page Item Click ?</section>
+		<section class="flex4" style="background:grey;"><h3>$42,551.67</h3> In Page Sales ?</section>
+		<section class="flex4" style="background:grey;"><h3>218</h3> In Page Sold Quantity ?</section>
+		<!-- <section class="flex1">sdfteytsfvdfcse</section> -->
+	</div>
+
+	<div class="contain_box">
+		<div class="respon_width"><div class="col-number">34,890 </div><div class="col-label">Page Views ?</div></div>
+		<div class="respon_width"><h3>7,940 </h3><span>In Page Item Click ?</span></div>
+		<div class="respon_width"><h3>$42,551.67</h3> <span>In Page Sales ?</span></div>
+		<div class="respon_width"><h3>218 </h3><span>In Page Sold Quantity ?</span> </div>
+		<div class="clear"></div>
 	</div>
 
     
