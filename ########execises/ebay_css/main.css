@@ -1,0 +1,135 @@
+div#banner-placeholder {
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+	padding: 2px;
+	margin-bottom: 0;
+}
+
+div#banner-resultholder,div#banner-chartholder,div#banner-gridholder {
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	padding: 2px;
+	margin-bottom: 0;
+}
+
+div.chart {
+	margin-top: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ddd;
+	height: 3in;
+	padding: 5px;
+	border-radius:4px;
+}
+
+div.linechart {
+	
+}
+
+#pageSummary h3 {
+	margin-top: 10px;
+}
+
+#pageSummary li {
+	border-right: 1px solid #e3e3e3;
+	padding: 0 20px;
+}
+
+.footer {
+	position: relative;
+	margin-top: 10px; /* negative value of footer height */
+	clear:both;
+	padding:5px;
+	padding-right: 20px;
+	color:#9A9A9A;
+	font-size: 80%;
+	z-index:1000;
+	text-align: right;
+} 
+
+.nav-sidebar{
+	font-size: 16px;
+}
+
+.nav-sidebar > li > ul{
+	font-size: 80%;
+}
+
+#jquery-msg-bg {
+	min-height: 9999px;
+}
+
+.filter-label{
+	font-size: 14px;
+	margin-bottom: 0px;
+}
+	
+.filter-dropdown{
+	text-align: left; 
+	float:left; 
+	margin-right: 5px;
+}
+.page-overlay{
+	display: none;
+	position: absolute; z-index: 100; top: 0px; right: 0px; left: 0px;background:#fff;opacity:0.7;text-align:center;
+	height:1416px;
+}
+
+div.ihub-rightbar{
+	z-index: 1001 ! important
+}	
+
+.leftnav-logo img.logo-img {
+	padding: 2px;
+}
+
+.dotted-underline{
+    border-bottom: 1px dotted;
+    cursor:pointer;
+}
+
+.round-button-circle {
+    width: 16px;
+    height:16px;
+    border-radius:8px;
+   	font-weight:bold;
+    font-size:7px;
+	color:white;
+	line-height: 16px;
+    overflow: hidden;
+    background: #aaaaaa;
+    text-align: center;
+    display:inline-block;
+    cursor:pointer;
+}
+
+
+.tooltip.bottom .tooltip-arrow{
+  display:none;
+}
+.tooltip.bottom .tooltip-inner{
+  box-shadow:0px 1px 3px 0 #ccc;
+  background:white;
+  padding-top:5px;
+  padding-bottom:5px;
+  border:1px solid #7CB5EC;
+  color:#555;
+  text-align:left;
+}
+.tooltip.bottom b{
+  padding:3px 0;
+  display:block;
+  color:#333;
+}
+
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+
+.no-title-stuff .ui-dialog-titlebar {
+  display:none;
+}
+
+.zindex201 {
+  z-index: 201!important;
+}

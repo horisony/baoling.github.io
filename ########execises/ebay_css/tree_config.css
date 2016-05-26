@@ -1,0 +1,25 @@
+ul {
+	list-style: none;
+}
+
+.text-field {
+	cursor: pointer;
+}
+
+.check-box {
+	width: 24px;
+	height: 18px;
+	border-radius: 8px;
+}
+
+.chat li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

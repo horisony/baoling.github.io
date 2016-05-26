@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="content-type"  content="text/html; charset=utf-8">  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Copatible" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="ebay_css/jquery.dataTables.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <style>
+	    .body{
+	    	margin:0;
+	    }
+	    .clear{
+	    	clear:both;
+	    }
+	    .box{
+	    	width:500px;
+	    	margin:auto;
+	    	height:2000px;
+	    	padding:20px 0;
+	    	background:linear-gradient(red,blue);
+	    	background-image:url(img/bg.png);
+	    	background-position: center;
+	    }	  
+	   
+/*	   #topItemDataTable>tbody>tr span {display:none; }
+	   #topItemDataTable>tbody>tr:hover span {display:inline;}*/
+	   #topItemDataTable>tbody>tr:hover{
+	   	height:90px;
+	   }
+	   #topItemDataTable>tbody>tr{
+	   	height:70px;
+	   	transition: height 100ms;
+	   	-webkit-transition: height 100ms;
+	   	/*transition-timing-function: ease;*/
+	   }
+
+
+    </style>
+</head>
+<body>
+	
+
+	<!--start table-->
+	<!--tabs-->
+	<div id="banner-gridholder" class="panel panel-default"	style="text-align: left; margin-top: 12px; border: 0px;">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#" >Top Items</a></li>
+	</ul>
+
+	<div class="tab-content">
+		<div style="float: left; margin-top: -5px" id="itemDetailLoading" ng-show="itemDetailLoading">
+		<img style="width: 40px" src="${pageContext.request.contextPath}/resources/css/images/loading.svg">
+	</div>
+
+	<div class="tab-pane fade in active">
+		<div style="margin-left: 10px; margin-right: 10px; text-align: left; margin-top: 12px;">
+			<table style="border: 0px; width: 100%; table-layout:fixed;" id="topItemDataTable" class="table table-striped row-border hover">
+				<thead>
+					<tr>
+						<th>In Page Items</th>
+						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Item Click</span></th>
+						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >In Page Item Click</span></th>
+						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Sales</span></th>
+						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >In Page Sales</span></th>
+						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Sold Quantity</span></th>
+						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >In Page Sold Quantity</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tr_text">
+						<td><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">a1321233223</span></td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+					</tr>
+					<tr class="tr_text">
+						<td><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">1321233223</span></td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+					</tr>
+					<tr class="tr_text">
+						<td><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">1321233223</span></td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</div>
+<!--end table-->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("span.span_text").hide();
+			$(".tr_text").mouseover(function(){
+				$("this td span").fadeIn(100);
+			});
+			$(".tr_text").mouseout(function(){
+				$("this>td>span").fadeOut(100);
+			});
+	
+});
+</script>
+
+
+    
+</body>
+</html>

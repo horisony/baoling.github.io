@@ -1,0 +1,67 @@
+.gro-leftnav-profile {
+    height: 36px;
+    width: 100%;
+    min-width: 200px;
+    padding: 6px;
+}
+
+.gro-leftnav-profile-img {
+    float: left;
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 30px;
+    height: 40px;
+    border-radius: 8px;
+    background-position: center;
+    background-size: 40px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+
+.gro-leftnav-profile-info {
+    padding-top: 5px;
+    float: left;
+    color: white;
+    padding-left: 15px;
+    font-size: 95%;
+    white-space: nowrap;
+    width: 120px;
+    cursor: default;
+}
+
+.gro-leftnav-profile a, a.visit{
+    padding: 3px;
+    color: #045FB4;
+}
+
+.gro-breadcrumb {
+    height: 46px;
+    line-height: 46px;
+    left: 54px;
+    padding-left: 26px;
+    margin-bottom: 15px;
+    margin-top: 34px;
+    word-spacing: 1px;
+    font-size: 14px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: #fff;
+    top: 0px;
+    _position: absolute;
+    _bottom: auto;
+    _top: expression(eval(document.documentElement.scrollTop));
+}
+
+.gro-breadcrumb-text{
+	float: left;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.gro-icon-learn{
+    background-image: url("../images/icons_learn.png");
+    opacity: .7;
+}
+.gro-icon-learn:hover{
+    opacity: .95;
+}

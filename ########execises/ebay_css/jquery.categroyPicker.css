@@ -1,0 +1,52 @@
+.cache-options .btn-group.open .dropdown-toggle{-webkit-box-shadow:none;box-shadow:none;}
+.cache-options .btn-group:hover .dropdown-toggle{color:#777;}
+.cache-options .btn-group.open .caret{-webkit-transform:rotate(180deg);transform:rotate(180deg)}
+.cache-options .btn-group .caret {top:32px;}
+.cache-options .filter-label{
+	font-size:12px;
+	font-weight: bold;
+	line-height:22px;
+	height:22px;
+	padding-right:10px;
+	color:#999;
+}
+.cache-options{
+    position: fixed;
+	top:0;
+	left:54px;
+	z-index:110;
+	background:#fff;
+	width:100%;
+}
+.cache-opt{
+	width:auto;
+	height:54px;
+	padding-left:26px;
+	margin-left:0px;
+	float:left;
+	cursor:pointer;
+	background:#f9f9f9;
+    position: relative;
+}
+.cache-opt span:first-child{
+	padding-right:25px;
+}
+.cache-opt:after,.cache-opt:before {
+  border: 28px solid transparent;
+  border-left: 10px solid #f9f9f9;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: -37px;
+  content: ' '
+}
+ 
+.cache-opt:before {
+  border-left-color: #ddd;
+  right: -38px;
+}
+.selectBoxStyle {
+	BACKGROUND-COLOR: #f9f9f9;
+	border:0
+}

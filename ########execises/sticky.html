@@ -6,10 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Copatible" content="IE=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 	<script src="js/jquery.min.js"></script>
-
-	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="js/bootstrap.min.js"></script>
     <style>
 	    .body{
@@ -32,12 +29,20 @@
 	    	height:50px;
 	    	background-color:#a05004;
 	    	margin-top:200px;
+	    	color:white;
+	    	/*float:left;*/
 	    }
 	    #sticky1{
-	    	background:yellow;
+	    	margin:0;
+	    	background:blue; 
+	    	position:fixed;
+	    	top:0;
 	    }
 	    #sticky2{
-	    	background:red;
+	    	background:purple;
+	    	margin:0;
+	    	position:fixed;
+	    	top:50px;
 	    }
 	    .sticky{
 
@@ -51,47 +56,35 @@
 	<!-- Input with icons -->
 	
 	<div class="box" >
-		<div class="sticky_none " id="sticky1">
-			
-		</div>
-		<div class="sticky_none " id="sticky2">
-			
-		</div>
+		<div class="sticky_none " ></div>
+		<div class="sticky_none " ></div>
 		<!-- <div class="clear"></div> -->
-
+		<div class="sticky_none " id = "sticky1">copy</div>
+		<div class="sticky_none " id = "sticky2">copy2</div>
 	</div>
 
 	<script type="text/javascript"> 
-	$(document).ready(function(){
-		$(window).scroll(function(){ 
-			var currTop=$(window).scrollTop();
-			if (currTop > 200){ 
-				$("#sticky1").addClass('sticky'); 
-				// $("#sticky2").addClass('sticky'); 
-			// }else if (currTop < 270 & currTop>200){
-			// 	$("#sticky1").addClass('sticky');  
-			// 	$("#sticky2").removeClass('sticky'); 
-			}else if (currTop < 200 ){
-				$("#sticky1").removeClass('sticky');  
-				// $("#sticky2").removeClass('sticky'); 
-			}
-			
-		}); 
-	});
+		$(document).ready(function(){
+			$("#sticky1").hide();
+			$("#sticky2").hide();
+			$(window).scroll(function(){ 
+				var currTop=$(window).scrollTop();
+				if (currTop < 200 ){
+					$("#sticky2").fadeOut(200);  
+					$("#sticky1").fadeOut(200);  
+				}else if ((currTop > 200) && (currTop < 450) ){
+					$("#sticky2").fadeOut(200);  
+					$("#sticky1").fadeIn(200);  
+				}else if (currTop > 450){ 
+					$("#sticky1").fadeIn(200);
+					$("#sticky2").fadeIn(200);
+		
+				}
+				
+			}); 
+		});
 
-	$(document).ready(function(){
-		$(window).scroll(function(){ 
-			var currTop=$(window).scrollTop();
-			if (currTop > 270){ 
-				// $("#sticky1").addClass('sticky'); 
-				$("#sticky2").addClass('sticky'); 
-			}else if (currTop < 270 ){
-				// $("#sticky1").removeClass('sticky');  
-				$("#sticky2").removeClass('sticky'); 
-			}
-			
-		}); 
-	});
+
 	</script> 
 
 
