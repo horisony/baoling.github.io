@@ -28,16 +28,69 @@
 	   
 /*	   #topItemDataTable>tbody>tr span {display:none; }
 	   #topItemDataTable>tbody>tr:hover span {display:inline;}*/
-	   #topItemDataTable>tbody>tr:hover{
-	   	height:90px;
-	   }
+
 	   #topItemDataTable>tbody>tr{
 	   	height:70px;
 	   	transition: height 100ms;
 	   	-webkit-transition: height 100ms;
 	   	/*transition-timing-function: ease;*/
 	   }
+	   #topItemDataTable>tbody>tr:hover{
+	   	min-height:90px;
+	   	padding-bottom: 12px;
+	   }
+	   #topItemDataTable>tbody>tr span{
+		/*transition: opacity 1s ease-out;*/
+		transition-delay: 1s;
+		display:none;
+		opacity: 0;
+		word-wrap:break-word;
+		line-height: 1.1;
+	   }
+	   #topItemDataTable>tbody>tr:hover span{
+    	display: block;
+    	/*opacity: 1;*/
+        -webkit-animation-delay: 2s; 
+           -moz-animation-delay: 2s; 
+            -ms-animation-delay: 2s; 
+             -o-animation-delay: 2s; 
+                animation-delay: 2s;
 
+	   	-webkit-animation: fadein 1000ms; 
+	   	   -moz-animation: fadein 1000ms; 
+	   	    -ms-animation: fadein 1000ms; 
+	   	     -o-animation: fadein 1000ms; 
+	   	        animation: fadein 1000ms;
+
+	   }
+	   @keyframes fadein {
+	       from { opacity: 0; }
+	       to   { opacity: 1; }
+	   }
+
+	   /* Firefox < 16 */
+	   @-moz-keyframes fadein {
+	       from { opacity: 0; }
+	       to   { opacity: 1; }
+	   }
+
+	   /* Safari, Chrome and Opera > 12.1 */
+	   @-webkit-keyframes fadein {
+	       from { opacity: 0; }
+	       to   { opacity: 1; }
+	   }
+
+	   /* Internet Explorer */
+	   @-ms-keyframes fadein {
+	       from { opacity: 0; }
+	       to   { opacity: 1; }
+	   }
+
+	   /* Opera < 12.1 */
+	   @-o-keyframes fadein {
+	       from { opacity: 0; }
+	       to   { opacity: 1; }
+	   }
 
     </style>
 </head>
@@ -72,7 +125,7 @@
 				</thead>
 				<tbody>
 					<tr class="tr_text">
-						<td><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">a1321233223</span></td>
+						<td><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">a132123 3223</span></td>
 						<td>12343.65</td>
 						<td>12343.65</td>
 						<td>12343.65</td>
@@ -106,7 +159,7 @@
 </div>
 <!--end table-->
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	$(document).ready(function() {
 		$("span.span_text").hide();
 			$(".tr_text").mouseover(function(){
@@ -117,7 +170,7 @@
 			});
 	
 });
-</script>
+</script> -->
 
 
     
