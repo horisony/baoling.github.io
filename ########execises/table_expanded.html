@@ -5,20 +5,42 @@
 	<meta http-equiv="content-type"  content="text/html; charset=utf-8">  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Copatible" content="IE=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="ebay_css/jquery.dataTables.css">
-    <link rel="stylesheet" href="table_expanded.css">
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="http://gro.corp.ebay.com/gro/resources/js/lib/jquery-1.11.2.js"></script> 
+
+    <script src="http://gro.corp.ebay.com/gro/resources/js/lib/jquery-1.11.2.js"></script>
+	<script src="http://gro.corp.ebay.com/gro/resources/js/lib/jquery-ui.js"></script>
+	<script src="http://gro.corp.ebay.com/gro/resources/js/lib/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="http://gro.corp.ebay.com/gro/resources/js/lib/bootstrap.min.js"></script> 
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
+	<link href="http://gro.corp.ebay.com/gro/resources/css/jquery-ui.css" rel="stylesheet" media="screen" />
+	<link href="http://gro.corp.ebay.com/gro/resources/css/jquery.dataTables.css" rel="stylesheet" />
+	<!--bootstrap-->
+	<link href="http://gro.corp.ebay.com/gro/resources/css/bootstrap.min.css" rel="stylesheet" />
+
+	<link type="text/css" charset="utf-8" rel="stylesheet" href="http://gro-qa.corp.ebay.com/gro/resources/css/main.css"/>
+    <link rel="stylesheet" href="table_expanded.css">
+    <link rel="stylesheet" href="icon_style.css">
+
 </head>
 <body>
-	
+	<!--start label_box-->
+	<div class="label_box">
+		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>	
+		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>	
+		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>	
+		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>
+		<div class="clear"></div>	
+	</div>
+	<!--stick label_box-->
+	<div class="label_box" id="LabelBoxSticky">
+		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>	
+		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>	
+		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>	
+		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>
+		<div class="clear"></div>	
+	</div>
 
 	<!--start table-->
 	<!--tabs-->
@@ -29,7 +51,7 @@
 
 	<div class="tab-content">
 		<div style="float: left; margin-top: -5px" id="itemDetailLoading" ng-show="itemDetailLoading">
-		<img style="width: 40px" src="${pageContext.request.contextPath}/resources/css/images/loading.svg">
+		<!-- <img style="width: 40px" src="http://gro.corp.ebay.com/gro/resources/css/images/loading.svg"> -->
 	</div>
 
 	<div class="tab-pane fade in active">
@@ -39,118 +61,187 @@
 					<tr>
 						<th>In Page Items</th>
 						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Item Click</span></th>
-						<th></th>
+						<!-- <th></th> -->
 						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >In Page Item Click</span></th>
-						<th></th>
+						<!-- <th></th> -->
 						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Sales</span></th>
-						<th></th>
+						<!-- <th></th> -->
 						
 					</tr>
 				</thead>
+				<!--sticky thead-->
+				<thead id="stickyThead">
+					<tr>
+						<th>In Page Items</th>
+						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Item Click</span></th>
+						<!-- <th></th> -->
+						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >In Page Item Click</span></th>
+						<!-- <th></th> -->
+						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Sales</span></th>
+						<!-- <th></th> -->
+						
+					</tr>
+				</thead>
+
 				<tbody>
 					<tr class="tr_text">
 						<td><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">a132123 3223</span></td>
 						<td>12343.65</td>
 						<td>12343.65</td>
 						<td>12343.65</td>
+				<!-- 		<td>12343.65</td>
 						<td>12343.65</td>
-						<td>12343.65</td>
-						<td>12343.65</td>
+						<td>12343.65</td> -->
 					</tr>
 					<tr class="tr_text">
 						<td><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">1321233223</span></td>
 						<td>12343.65</td>
 						<td>12343.65</td>
 						<td>12343.65</td>
+				<!-- 		<td>12343.65</td>
 						<td>12343.65</td>
-						<td>12343.65</td>
-						<td>12343.65</td>
+						<td>12343.65</td> -->
 					</tr>
 					<tr class="tr_text">
 						<td><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">1321233223</span></td>
 						<td>12343.65</td>
 						<td>12343.65</td>
 						<td>12343.65</td>
+					<!-- 	<td>12343.65</td>
 						<td>12343.65</td>
-						<td>12343.65</td>
-						<td>12343.65</td>
+						<td>12343.65</td> -->
 					</tr>
 				</tbody>
 			</table>
 
-			<table style="border: 0px; width: 100%; table-layout:fixed;" id="table2" class="table table-striped row-border hover">
+		<!-- 	<table style="border: 0px; width: 100%; table-layout:fixed;" id="table2" class="table table-striped row-border table-hover">
 				<thead>
 					<tr>
 						<th>In Page Items</th>
 						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Item Click</span></th>
-						<th></th>
+				
 						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >In Page Item Click</span></th>
-						<th></th>
-						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Sales</span></th>
-						<th></th>
+						
+						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Sales</span></th>					
 						
 					</tr>
 				</thead>
 				<tbody>
 					<tr class="tr_text">
-						<td class="col_1"><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">a132123 3223</span></td>
-						<td>12343.65<td data-sparkline="24, 55, 21, 83 "/></td>
-						<td>12343.65<td data-sparkline="24, 55, 21, 83 "/></td>
-						<td>12343.65<td data-sparkline="24, 55, 21, 83 "/></td>
+						<td class="col_1"><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">a1321233223</span></td>
+						<td>12343.65
+							<span class="icon-lineChart_icon" angular-tooltip data-toggle="tooltip" data-placement="bottom" title="sfdfsd"></span>
+						</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
 			
 					</tr>
 					<tr class="tr_text">
 						<td class="col_1"><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">1321233223</span></td>
-						<td>12343.65<td data-sparkline="24, 55, 21, 83 "/></td>
-						<td>12343.65<td data-sparkline="24, 55, 21, 83 "/></td>
-						<td>12343.65<td data-sparkline="24, 55, 21, 83 "/></td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
 			
 					</tr>
 					<tr class="tr_text">
 						<td class="col_1"><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">1321233223</span></td>
-						<td>12343.65<td data-sparkline="24, 55, 21, 83 "/></td>
-						<td>12343.65<td data-sparkline="24, 55, 21, 83 "/></td>
-						<td>12343.65<td data-sparkline="24, 55, 21, 83 "/></td>
-				
-
+						<td>12343.65</td>
+						<td>12343.65</td>
+						<td>12343.65</td>
+						
 					</tr>
 				</tbody>
-			</table>
+			</table> -->
+
+			<!-- <td data-sparkline="24, 55, 21, 83 "/> -->
 
 			<table id="test_table" class="table table-striped table-hover">
 				<thead>
 					<tr>
 						<th>first</th>
-						<th>second</th>
-						<th>se-chart</th>
-						<th>third</th>
-						<th>fourth</th>
+						<th class="pre-sparkline table_hover_bg">second</th>
+						<th class="highlight sparkline">se-chart</th>
+						<th class="pre-sparkline">third</th>
+						<th class="sparkline">th-chart</th>
+						<th class="pre-sparkline">fourth</th>
+						<th class="sparkline">fo-chart</th>
 					</tr>
 				</thead>
 				<tbody>
 
 					<tr>
-						<td>124</td>
-						<td>324<td data-sparkline="24, 55, 21, 83 "/></td>
-						<!-- <td data-sparkline="24, 55, 21, 83 "/> -->
-						<td>452</td>
-						<td>452</td>
+						<td>abc1</td>
+						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
+						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>			
+						<td class="pre-sparkline left_border_pre">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
+						<td class="pre-sparkline">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
 					</tr>
 
 					<tr>
-						<td>124</td>
-						<td>324<td data-sparkline="24, 55, 21, 83 "/></td>
-						<!-- <td data-sparkline="24, 55, 21, 83 "/> -->
-						<td>452</td>
-						<td>452</td>
+						<td>abc2</td>
+						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
+						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>				
+						<td class="pre-sparkline left_border_pre">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
+						<td class="pre-sparkline">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
 					</tr>
 
 					<tr>				
-						<td>124</td>
-						<td>324<td data-sparkline="24, 55, 21, 83 "/></td>
-						
-						<td>452</td>
-						<td>452</td>
+						<td>abc3</td>
+						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
+						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>						
+						<td class="pre-sparkline left_border_pre">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
+						<td class="pre-sparkline">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
+					</tr>
+					<tr>				
+						<td>abc3</td>
+						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
+						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>						
+						<td class="pre-sparkline left_border_pre">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
+						<td class="pre-sparkline">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
+					</tr>
+					<tr>				
+						<td>abc3</td>
+						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
+						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>						
+						<td class="pre-sparkline left_border_pre">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
+						<td class="pre-sparkline">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
+					</tr>
+					<tr>				
+						<td>abc3</td>
+						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
+						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>						
+						<td class="pre-sparkline left_border_pre">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
+						<td class="pre-sparkline">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
+					</tr>
+					<tr>				
+						<td>abc3</td>
+						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
+						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>						
+						<td class="pre-sparkline left_border_pre">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
+						<td class="pre-sparkline">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
+					</tr>
+					<tr>				
+						<td>abc3</td>
+						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
+						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>						
+						<td class="pre-sparkline left_border_pre">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
+						<td class="pre-sparkline">452</td>
+						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
 					</tr>
 
 				</tbody>
@@ -164,199 +255,248 @@
 
 
 <script type="text/javascript">
-	var sparkline=$("#table2>tbody>tr>td>td");
-	$(document).ready(function() {
-		$("#table2>tbody>tr>td>td").hide();
-			$("td").mouseover(function(){
-				$("#table2>tbody>tr>td:nth-child(5n+2)").addClass("wide_width");
-				$("#table2>tbody>tr>td:nth-child(5n+2)>td").show();
-			});
-			$("td").mouseout(function(){
-				$("#table2>tbody>tr>td:nth-child(5n+2)>td").hide();
-			});
 	
-	});
+	$(document).ready(function() {
+		// start sticky components
+		$("#LabelBoxSticky").hide();
+		$("#stickyThead").hide();
+		$(window).scroll(function(){
+			var windowTop = $(window).scrollTop();
+			if (windowTop>20){
+				$("#LabelBoxSticky").show();
+			}else{
+				$("#LabelBoxSticky").hide();
+			}
 
-	$(function () {
-	    /**
-	     * Create a constructor for sparklines that takes some sensible defaults and merges in the individual
-	     * chart options. This function is also available from the jQuery plugin as $(element).highcharts('SparkLine').
-	     */
-	    Highcharts.SparkLine = function (a, b, c) {
-	        var hasRenderToArg = typeof a === 'string' || a.nodeName,
-	            options = arguments[hasRenderToArg ? 1 : 0],
-	            defaultOptions = {
-	                chart: {
-	                    renderTo: (options.chart && options.chart.renderTo) || this,
-	                    backgroundColor: null,
-	                    borderWidth: 0,
-	                    type: 'area',
-	                    margin: [2, 0, 2, 0],
-	                    // width: 100,
-	                    height: 60,
-	                    style: {
-	                        overflow: 'visible'
-	                    },
-	                    skipClone: true
-	                },
-	                title: {
-	                    text: ''
-	                },
-	                credits: {
-	                    enabled: false
-	                },
-	                exporting: {  
-	                    enabled:false  
-	                },  
-	                xAxis: {
-	                    labels: {
-	                        enabled: false
-	                    },
-	                    title: {
-	                        text: null
-	                    },
-	                    startOnTick: false,
-	                    endOnTick: false,
-	                    tickPositions: []
-	                },
-	                yAxis: {
-	                    endOnTick: false,
-	                    startOnTick: false,
-	                    labels: {
-	                        enabled: false
-	                    },
-	                    title: {
-	                        text: null
-	                    },
-	                    tickPositions: [0]
-	                },
-	                legend: {
-	                    enabled: false
-	                },
-	                tooltip: {
-	                    backgroundColor: null,
-	                    borderWidth: 0,
-	                    shadow: false,
-	                    useHTML: true,
-	                    hideDelay: 0,
-	                    shared: true,
-	                    padding: 0,
-	                    positioner: function (w, h, point) {
-	                        return { x: point.plotX - w / 2, y: point.plotY - h };
-	                    }
-	                },
-	                plotOptions: {
-	                    series: {
-	                        animation: false,
-	                        lineWidth: 1,
-	                        shadow: false,
-	                        states: {
-	                            hover: {
-	                                lineWidth: 1
-	                            }
-	                        },
-	                        marker: {
-	                            radius: 1,
-	                            states: {
-	                                hover: {
-	                                    radius: 2
-	                                }
-	                            }
-	                        },
-	                        fillOpacity: 0.25
-	                    },
-	                    column: {
-	                        negativeColor: '#910000',
-	                        borderColor: 'silver'
-	                    }
-	                }
-	            };
+			var stickyTheadTop = $(".label_box").outerHeight(true)+$("#banner-gridholder>ul").outerHeight();
+			var LableBoxHeight = $("#LabelBoxSticky").outerHeight();
+			if ((windowTop+LableBoxHeight)>stickyTheadTop){
+				$("#stickyThead").css("top",LableBoxHeight);
+				$("#stickyThead").show();
+			}else{
+				$("#stickyThead").hide();
+			}
+		});
+		// $(window).scroll(function(){
+		// 	var windowTop = $(window).scrollTop();
+		// 	var stickyTheadTop = $("#stickyThead").outerHeight(true)+;
+		// 	if (windowTop>stickyTheadTop){
+		// 		$("#LabelBoxSticky").show();
+		// 	}else{
+		// 		$("#LabelBoxSticky").hide();
+		// 	}
+		// });
 
-	        options = Highcharts.merge(defaultOptions, options);
 
-	        return hasRenderToArg ?
-	            new Highcharts.Chart(a, options, c) :
-	            new Highcharts.Chart(options, b);
-	    };
+		/**
+		     * Create a constructor for sparklines that takes some sensible defaults and merges in the individual
+		     * chart options. This function is also available from the jQuery plugin as $(element).highcharts('SparkLine').
+		     */
+		    
+		    
+		    Highcharts.SparkLine = function (a, b, c) {
+		        var hasRenderToArg = typeof a === 'string' || a.nodeName,
+		            options = arguments[hasRenderToArg ? 1 : 0],
+		            defaultOptions = {
+		                chart: {
+		                    renderTo: (options.chart && options.chart.renderTo) || this,
+		                    backgroundColor: null,
+		                    borderWidth: 0,
+		                    type: 'area',
+		                    margin: [2, 0, 2, 0],
+		                    width: 120,
+		                    height: 20,
+		                    style: {
+		                        overflow: 'visible'
+		                    },
+		                    skipClone: true
+		                },
+		                title: {
+		                    text: ''
+		                },
+		                credits: {
+		                    enabled: false
+		                },
+		                exporting:{
+		                	enabled:false
+		                },
+		                xAxis: {
+		                    labels: {
+		                        enabled: false
+		                    },
+		                    title: {
+		                        text: null
+		                    },
+		                    startOnTick: false,
+		                    endOnTick: false,
+		                    tickPositions: []
+		                },
+		                yAxis: {
+		                    endOnTick: false,
+		                    startOnTick: false,
+		                    labels: {
+		                        enabled: false
+		                    },
+		                    title: {
+		                        text: null
+		                    },
+		                    tickPositions: [0]
+		                },
+		                legend: {
+		                    enabled: false
+		                },
+		                tooltip: {
+		                    backgroundColor: null,
+		                    borderWidth: 0,
+		                    shadow: false,
+		                    useHTML: true,
+		                    hideDelay: 0,
+		                    shared: true,
+		                    padding: 0,
+		                    positioner: function (w, h, point) {
+		                        return { x: point.plotX - w / 2, y: point.plotY - h };
+		                    }
+		                },
+		                plotOptions: {
+		                    series: {
+		                        animation: false,
+		                        lineWidth: 1,
+		                        shadow: false,
+		                        states: {
+		                            hover: {
+		                                lineWidth: 1
+		                            }
+		                        },
+		                        marker: {
+		                            radius: 1,
+		                            states: {
+		                                hover: {
+		                                    radius: 2
+		                                }
+		                            }
+		                        },
+		                        fillOpacity: 0.25
+		                    },
+		                    column: {
+		                        negativeColor: '#910000',
+		                        borderColor: 'silver'
+		                    }
+		                }
+		            };
 
-	    var start = +new Date(),
-	        $tds = $('td[data-sparkline]'),
-	        fullLen = $tds.length,
-	        n = 0;
+		        options = Highcharts.merge(defaultOptions, options);
 
-	    // Creating 153 sparkline charts is quite fast in modern browsers, but IE8 and mobile
-	    // can take some seconds, so we split the input into chunks and apply them in timeouts
-	    // in order avoid locking up the browser process and allow interaction.
-	    function doChunk() {
-	        var time = +new Date(),
-	            i,
-	            len = $tds.length,
-	            $td,
-	            stringdata,
-	            arr,
-	            data,
-	            chart;
+		        return hasRenderToArg ?
+		            new Highcharts.Chart(a, options, c) :
+		            new Highcharts.Chart(options, b);
+		    };
 
-	        for (i = 0; i < len; i += 1) {
-	            $td = $($tds[i]);
-	            stringdata = $td.data('sparkline');
-	            arr = stringdata.split('; ');
-	            data = $.map(arr[0].split(', '), parseFloat);
-	            chart = {};
+		    var start = +new Date(),
+		        $tds = $('td[data-sparkline]'),
+		        fullLen = $tds.length,
+		        n = 0;
 
-	            if (arr[1]) {
-	                chart.type = arr[1];
-	            }
-	            $td.highcharts('SparkLine', {
-	                series: [{
-	                    data: data,
-	                    pointStart: 1
-	                }],
-	                tooltip: {
-	                    headerFormat: '<span style="font-size: 10px">' + $td.parent().find('th').html() + ', Q{point.x}:</span><br/>',
-	                    pointFormat: '<b>{point.y}.000</b> USD'
-	                },
-	                chart: chart
-	            });
+		    // Creating 153 sparkline charts is quite fast in modern browsers, but IE8 and mobile
+		    // can take some seconds, so we split the input into chunks and apply them in timeouts
+		    // in order avoid locking up the browser process and allow interaction.
+		    function doChunk() {
+		        var time = +new Date(),
+		            i,
+		            len = $tds.length,
+		            $td,
+		            stringdata,
+		            arr,
+		            data,
+		            chart;
 
-	            n += 1;
+		        for (i = 0; i < len; i += 1) {
+		            $td = $($tds[i]);
+		            stringdata = $td.data('sparkline');
+		            arr = stringdata.split('; ');
+		            data = $.map(arr[0].split(', '), parseFloat);
+		            chart = {};
 
-	            // If the process takes too much time, run a timeout to allow interaction with the browser
-	            if (new Date() - time > 500) {
-	                $tds.splice(0, i + 1);
-	                setTimeout(doChunk, 0);
-	                break;
-	            }
+		            if (arr[1]) {
+		                chart.type = arr[1];
+		            }
+		            $td.highcharts('SparkLine', {
+		                series: [{
+		                    data: data,
+		                    pointStart: 1
+		                }],
+		                tooltip: {
+		                    headerFormat: '<span style="font-size: 10px">' + $td.parent().find('th').html() + ', Q{point.x}:</span><br/>',
+		                    pointFormat: '<b>{point.y}.000</b> USD'
+		                },
+		                chart: chart
+		            });
 
-	            // Print a feedback on the performance
-	            if (n === fullLen) {
-	                $('#result').html('Generated ' + fullLen + ' sparklines in ' + (new Date() - start) + ' ms');
-	            }
-	        }
-	    }
-	    doChunk();
+		            n += 1;
 
-	});
+		            // If the process takes too much time, run a timeout to allow interaction with the browser
+		            if (new Date() - time > 500) {
+		                $tds.splice(0, i + 1);
+		                setTimeout(doChunk, 0);
+		                break;
+		            }
 
-	// $("table.dataTable tr td:nth-child(2)").hover(function(){
-	// $("table.dataTable tr th:nth-child(3)").css("display","table-cell");
-	// $("table.dataTable tr td:nth-child(3)").css("display","table-cell");
-	// },function(){
-	// $("table.dataTable tr th:nth-child(3)").css("display","none");
-	// $("table.dataTable tr td:nth-child(3)").css("display","none");
-	// }); 
+		            // Print a feedback on the performance
+		            if (n === fullLen) {
+		                $('#result').html('Generated ' + fullLen + ' sparklines in ' + (new Date() - start) + ' ms');
+		            }
+		        }
+		    }
+		    doChunk();
 
-	// $("table.dataTable tr tr:nth-child(2n+2),table.dataTable tr td:nth-child(2n+2)").hover(function(){
-	// 	var trIndex = $(this).index()+1;
-	// 	$("table.dataTable tr").each(function(tblId,tbItem){
-	// 		$(tbItem).children().eq(trIndex).css("display","table-cell");
-	// 	});
-	// },function(){
-	// 	var trIndex = $(this).index()+1;
-	// 	$("table.dataTable tr").each(function(tblId,tbItem){
-	// 		$(tbItem).children().eq(trIndex).css("display","none");
-	// 	});
-	// }); 
+
+	
+
+		// var linChart_icon = $('#table2>tbody>tr>td>span.icon-lineChart_icon');
+		// var colIdx = $(this).index();
+		
+		// $("#table2 .icon-lineChart_icon").hide();
+		// $("td").on("mouseover",function(){
+		// 	// $("#table2>tbody>tr>td:nth-child(5n+2)").addClass("wide_width");
+		// 	$('#table2 .icon-lineChart_icon').show();
+		// });
+		// $("td").on("mouseleave",function(){
+		// 	$("#table2>tbody>tr>td:nth-child(5n+2)>td").hide();
+		// 	$('#table2>tbody>tr>td>span.icon-lineChart_icon').hide();
+		// });			
+	var myTable = $('#test_table').DataTable();
+	
+    
+    $('td.pre-sparkline').on('mouseover', function () {
+    	var colIdx = $(this).index();
+    	$(".sparkline").removeClass( 'highlight' );
+    	$(".pre-sparkline,.sparkline").removeClass("table_hover_bg").removeClass("left_border_pre");
+    	// $('#test_table>tbody>tr.odd').find("td:eq(2)").addClass("table_hover_bg");
+    	$('#test_table>tbody>td:nth-child(2n+2)').addClass("table_hover_bg");
+ 
+		$(myTable.column(colIdx+1).header()).addClass('highlight');
+		$(myTable.column(colIdx+1).nodes()).addClass('highlight').addClass("table_hover_bg");
+		$(myTable.column(colIdx).nodes()).addClass("table_hover_bg").addClass("left_border_pre");
+		// $(myTable.column(colIdx).nodes()).eq(2).addClass('table_hover_bg_sub');
+		// $(myTable.column(colIdx+1).nodes());
+		$(myTable.column(colIdx+2).nodes()).addClass("left_border_pre");
+		// $(".table_hover_bg:nth-child(2n+1)").css("background");    	
+    });
+    $("td.sparkline").on("mouseover",function(){
+    	var colIdx = $(this).index();
+    	$(myTable.column(colIdx-1).nodes()).addClass("table_hover_bg").addClass("left_border_pre");
+    });
+
+    // $('.table>tbody>tr.even td.sparkline').on('mouseover', function (){
+    // 	var colIdx = $(this).index();
+    // 	$(myTable.column(colIdx+1).nodes()).addClass('table_hover_bg_hover');
+    // 	$(myTable.column(colIdx).nodes()).addClass('table_hover_bg_hover');
+    // });
+
+
+
+
+	});//readey end
+
 </script>
 
 

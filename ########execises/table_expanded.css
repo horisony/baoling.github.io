@@ -4,15 +4,40 @@
 .clear{
 	clear:both;
 }
-.box{
-	width:500px;
+.label_box{
 	margin:auto;
-	height:2000px;
-	padding:20px 0;
-	background:linear-gradient(red,blue);
-	background-image:url(img/bg.png);
-	background-position: center;
-}	  
+	padding:20px;
+	background:#f9f9f9;
+	margin:20px;
+	border-radius: 4px;
+	border:1px solid #ddd;
+}
+#LabelBoxSticky{	
+	margin:0;
+	width:100%;
+	position:fixed;
+	top:0;
+	z-index: 1000;
+}
+#stickyThead{
+	width:100%;
+	margin:0;
+	position:fixed;
+	/*top:120px;*/
+	left:0;
+	right:0;
+	z-index: 1000;
+	background: white;
+}
+#stickyThead>tr{
+	width:100%;
+	left:0;
+	right:0;
+	display: table;
+}
+#stickyThead>tr>th{
+	width:25%;
+}	 	  
 	   
 /*	   #topItemDataTable>tbody>tr span {display:none; }
 	   #topItemDataTable>tbody>tr:hover span {display:inline;}*/
@@ -29,7 +54,7 @@
 }
 #topItemDataTable>tbody>tr span{
 /*transition: opacity 1s ease-out;*/
-transition-delay: 1s;
+/*transition-delay: 1s;*/
 display:none;
 opacity: 0;
 word-wrap:break-word;
@@ -38,17 +63,17 @@ line-height: 1.1;
 #topItemDataTable>tbody>tr:hover span{
 display: block;
 /*opacity: 1;*/
--webkit-animation-delay: 2s; 
+/*-webkit-animation-delay: 2s; 
    -moz-animation-delay: 2s; 
     -ms-animation-delay: 2s; 
      -o-animation-delay: 2s; 
-        animation-delay: 2s;
+        animation-delay: 2s;*/
 
-	-webkit-animation: fadein 1000ms; 
-	   -moz-animation: fadein 1000ms; 
-	    -ms-animation: fadein 1000ms; 
-	     -o-animation: fadein 1000ms; 
-	        animation: fadein 1000ms;
+	-webkit-animation: fadein 500ms; 
+	   -moz-animation: fadein 500ms; 
+	    -ms-animation: fadein 500ms; 
+	     -o-animation: fadein 500ms; 
+	        animation: fadein 500ms;
 
 }
 @keyframes fadein {
@@ -79,42 +104,41 @@ display: block;
    from { opacity: 0; }
    to   { opacity: 1; }
 }
-
-#table2>tbody>tr>td,#table2>thead>tr>th{
+/*#table2>thead>tr>th{
+	width:26%;
+}
+#table2>tbody>tr>td{
 	height:90px;
+	width:26%;
 	vertical-align:middle;
 }
 #table2>tbody>tr>td:first-child,#table2>thead>tr>th:first-child{
-	width:16%;
+	width:22%;
 	word-wrap: break-word;
 }
 #table2>tbody>tr>td:nth-child(2),#table2>thead>tr>th:nth-child(2){
-	width:14%;
+	width:24%;
 	word-wrap: break-word;
+}*/
+.icon-lineChart_icon{
+	color:#888;
+	padding:8px;
+	margin-left: 10%;
+	background: none;
+	border-radius: 4px;
 }
+
+.icon-lineChart_icon:hover{
+	background: #ddd;
+	color:#5767ef;
+}
+
 #result {
     text-align: right;
     color: gray;
     min-height: 2em;
 }
-/*#table2 {
-    margin: 0 auto;
-    border-collapse: collapse;
-}
-th {
-    font-weight: bold;
-    text-align: left;
-}
-td, th {
-    padding: 5px;
-    border-bottom: 1px solid silver;
-    height: 20px;
-}
 
-thead th {
-    border-top: 2px solid gray;
-    border-bottom: 2px solid gray;
-}*/
 .highcharts-tooltip>span {
     background: white;
     border: 1px solid silver;
@@ -122,16 +146,7 @@ thead th {
     box-shadow: 1px 1px 2px #888;
     padding: 8px;
 }
-/*#table2>tbody>tr>td>img{
-	display:none;	
-}*/
-/*#table2>tbody>tr>td:hover img{
-	display:inline;	
-}*/
-/*#table2>tbody>tr>td:nth-child(2):hover #table2>tbody>tr>td:nth-child(2){
-	color:red;
-	display:inline;	
-}*/
+
 .redtext{
 	color:red;
 	display: inline;
@@ -142,21 +157,62 @@ thead th {
 .narrow_width{
 	width:20%;
 }
-table{
-	/*display: flex;*/
-}
-#test_table>thead>tr>th{
-	font-weight: bold;
-}
-
-#test_table>tbody>tr>td:first-child{
-	width:12%;
-}
 
 
-#test_table>tbody>tr>td:nth-child(2),#test_table>thead>tr>th:nth-child(2){
-	width:21%;
+.pre-sparkline{
+	width:18%;
 }
+
+/*td.pre-sparkline{
+	border-left:1px solid #ddd;
+}*/
+/*#test_table>tbody>tr.odd{
+	background: red;
+}*/
+.sparkline {
+	display: none;
+	/*width:0px;
+	transition:width 200ms;
+	overflow:hidden;*/
+}
+.sparkline.highlight {
+	display: table-cell;
+	/*width:280px;*/
+	/*overflow:visible;*/
+	width:28%;
+	background:#fdfbf5;
+	/*background:#fff;*/
+}
+
+.left_border_pre{
+	border-left:1px solid #acf;
+}
+.right_border_spark{
+	border-right:1px solid #acf;
+}
+.table_hover_bg{
+	background-color:#fcf9ef;
+	/*background-color:#fff;*/
+}
+.table>tbody>tr.even td.sparkline{
+	background-color:#fdfbf5;
+}
+/*.table>tbody>tr>td.sparkline:hover{
+	background-color:#fdfbf5;
+}*/
+
+.table>tbody>tr.even td.pre-sparkline.table_hover_bg{
+	background-color:#fdfbf5;
+}
+.table_hover_bg_hover{
+	background-color:red;/*//#f6f3e9*/
+}
+
+
+/*.table_hover_bg_sub{
+	background-color:pink;
+}*/
+
 
 
 
