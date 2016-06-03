@@ -185,11 +185,11 @@ display: block;
 }
 
 .left_border_pre{
-	border-left:1px solid #acf;
+	border-left:1px solid #e3d098;
 }
-.right_border_spark{
+/*.right_border_spark{
 	border-right:1px solid #acf;
-}
+}*/
 .table_hover_bg{
 	background-color:#fcf9ef;
 	/*background-color:#fff;*/
