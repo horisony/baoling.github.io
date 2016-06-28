@@ -25,152 +25,24 @@
 
 </head>
 <body>
-	<!--start label_box-->
-	<div class="label_box">
-		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>	
-		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>	
-		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>	
-		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>
-		<div class="clear"></div>	
-	</div>
-	<!--stick label_box-->
-	<div class="label_box" id="LabelBoxSticky">
-		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>	
-		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>	
-		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>	
-		<div class="col-xs-3"><h3>1234.00</h3><span>Inpage Sale</span></div>
-		<div class="clear"></div>	
-	</div>
-
-	<!--start table-->
-	<!--tabs-->
-	<div id="banner-gridholder" class="panel panel-default"	style="text-align: left; margin-top: 12px; border: 0px;">
-	<ul class="nav nav-tabs">
-		<li class="active"><a href="#" >Top Items</a></li>
-	</ul>
-
-	<div class="tab-content">
-		<div style="float: left; margin-top: -5px" id="itemDetailLoading" ng-show="itemDetailLoading">
-		<!-- <img style="width: 40px" src="http://gro.corp.ebay.com/gro/resources/css/images/loading.svg"> -->
-	</div>
-
-	<div class="tab-pane fade in active">
-		<div style="margin-left: 10px; margin-right: 10px; text-align: left; margin-top: 12px;">
-			<table style="border: 0px; width: 100%; table-layout:fixed;" id="topItemDataTable" class="table table-striped row-border hover">
-				<thead>
-					<tr>
-						<th>In Page Items</th>
-						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Item Click</span></th>
-						<!-- <th></th> -->
-						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >In Page Item Click</span></th>
-						<!-- <th></th> -->
-						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Sales</span></th>
-						<!-- <th></th> -->
-						
-					</tr>
-				</thead>
-				<!--sticky thead-->
-				<thead id="stickyThead">
-					<tr>
-						<th>In Page Items</th>
-						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Item Click</span></th>
-						<!-- <th></th> -->
-						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >In Page Item Click</span></th>
-						<!-- <th></th> -->
-						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Sales</span></th>
-						<!-- <th></th> -->
-						
-					</tr>
-				</thead>
-
-				<tbody>
-					<tr class="tr_text">
-						<td><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">a132123 3223</span></td>
-						<td>12343.65</td>
-						<td>12343.65</td>
-						<td>12343.65</td>
-				<!-- 		<td>12343.65</td>
-						<td>12343.65</td>
-						<td>12343.65</td> -->
-					</tr>
-					<tr class="tr_text">
-						<td><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">1321233223</span></td>
-						<td>12343.65</td>
-						<td>12343.65</td>
-						<td>12343.65</td>
-				<!-- 		<td>12343.65</td>
-						<td>12343.65</td>
-						<td>12343.65</td> -->
-					</tr>
-					<tr class="tr_text">
-						<td><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">1321233223</span></td>
-						<td>12343.65</td>
-						<td>12343.65</td>
-						<td>12343.65</td>
-					<!-- 	<td>12343.65</td>
-						<td>12343.65</td>
-						<td>12343.65</td> -->
-					</tr>
-				</tbody>
-			</table>
-
-		<!-- 	<table style="border: 0px; width: 100%; table-layout:fixed;" id="table2" class="table table-striped row-border table-hover">
-				<thead>
-					<tr>
-						<th>In Page Items</th>
-						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Item Click</span></th>
-				
-						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >In Page Item Click</span></th>
-						
-						<th><span class="dotted-underline" angular-tooltip data-toggle="tooltip" data-placement="bottom" >Total Sales</span></th>					
-						
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="tr_text">
-						<td class="col_1"><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">a1321233223</span></td>
-						<td>12343.65
-							<span class="icon-lineChart_icon" angular-tooltip data-toggle="tooltip" data-placement="bottom" title="sfdfsd"></span>
-						</td>
-						<td>12343.65</td>
-						<td>12343.65</td>
-			
-					</tr>
-					<tr class="tr_text">
-						<td class="col_1"><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">1321233223</span></td>
-						<td>12343.65</td>
-						<td>12343.65</td>
-						<td>12343.65</td>
-			
-					</tr>
-					<tr class="tr_text">
-						<td class="col_1"><img src="imgs/inpage_items.JPG" style="width:50px;"><span class="span_text">1321233223</span></td>
-						<td>12343.65</td>
-						<td>12343.65</td>
-						<td>12343.65</td>
-						
-					</tr>
-				</tbody>
-			</table> -->
-
-			<!-- <td data-sparkline="24, 55, 21, 83 "/> -->
-
+		<div class="box">
+			<br/><a href="link.html"><p>Drill to link level</p></a><br/>
 			<table id="test_table" class="table table-striped table-hover">
 				<thead>
 					<tr>
-						<th>first</th>
-						<th class="pre-sparkline table_hover_bg">second</th>
-						<th class="highlight sparkline">se-chart</th>
-						<th class="pre-sparkline">third</th>
-						<th class="sparkline">th-chart</th>
-						<th class="pre-sparkline">fourth</th>
-						<th class="sparkline">fo-chart</th>
+						<th>Module</th>
+						<th class="pre-sparkline table_hover_bg">Page View</th>
+						<th class="highlight sparkline">sparkline</th>
+						<th class="pre-sparkline">Click</th>
+						<th class="sparkline">sparkline</th>
+						<th class="pre-sparkline">CTR</th>
+						<th class="sparkline">sparkline</th>
 					</tr>
 				</thead>
 				<tbody>
 
 					<tr>
-						<td>abc1</td>
+						<td>m2733.l1</td>
 						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
 						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>			
 						<td class="pre-sparkline left_border_pre">452</td>
@@ -180,7 +52,7 @@
 					</tr>
 
 					<tr>
-						<td>abc2</td>
+						<td>m3252.l2</td>
 						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
 						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>				
 						<td class="pre-sparkline left_border_pre">452</td>
@@ -190,7 +62,7 @@
 					</tr>
 
 					<tr>				
-						<td>abc3</td>
+						<td>m2734.l1</td>
 						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
 						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>						
 						<td class="pre-sparkline left_border_pre">452</td>
@@ -199,7 +71,7 @@
 						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
 					</tr>
 					<tr>				
-						<td>abc3</td>
+						<td>m3252.l1</td>
 						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
 						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>						
 						<td class="pre-sparkline left_border_pre">452</td>
@@ -208,7 +80,7 @@
 						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
 					</tr>
 					<tr>				
-						<td>abc3</td>
+						<td>m2735.l1</td>
 						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
 						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>						
 						<td class="pre-sparkline left_border_pre">452</td>
@@ -217,7 +89,7 @@
 						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
 					</tr>
 					<tr>				
-						<td>abc3</td>
+						<td>m2734.l5</td>
 						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
 						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>						
 						<td class="pre-sparkline left_border_pre">452</td>
@@ -226,7 +98,7 @@
 						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
 					</tr>
 					<tr>				
-						<td>abc3</td>
+						<td>m4352.l1</td>
 						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
 						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>						
 						<td class="pre-sparkline left_border_pre">452</td>
@@ -235,7 +107,7 @@
 						<td class="sparkline" data-sparkline="71, 78, 39, 66 "/>
 					</tr>
 					<tr>				
-						<td>abc3</td>
+						<td>m2158.l1</td>
 						<td class="pre-sparkline table_hover_bg left_border_pre">324</td>
 						<td class="highlight sparkline" data-sparkline="71, 78, 39, 66 "/>						
 						<td class="pre-sparkline left_border_pre">452</td>
@@ -246,7 +118,7 @@
 
 				</tbody>
 			</table>
-
+			</div>
 		</div>
 	</div>
 </div>
@@ -256,43 +128,7 @@
 
 <script type="text/javascript">
 	
-	$(document).ready(function() {
-		// start sticky components
-		$("#LabelBoxSticky").hide();
-		$("#stickyThead").hide();
-		$(window).scroll(function(){
-			var windowTop = $(window).scrollTop();
-			if (windowTop>20){
-				$("#LabelBoxSticky").show();
-			}else{
-				$("#LabelBoxSticky").hide();
-			}
-
-			var stickyTheadTop = $(".label_box").outerHeight(true)+$("#banner-gridholder>ul").outerHeight();
-			var LableBoxHeight = $("#LabelBoxSticky").outerHeight();
-			if ((windowTop+LableBoxHeight)>stickyTheadTop){
-				$("#stickyThead").css("top",LableBoxHeight);
-				$("#stickyThead").show();
-			}else{
-				$("#stickyThead").hide();
-			}
-		});
-		// $(window).scroll(function(){
-		// 	var windowTop = $(window).scrollTop();
-		// 	var stickyTheadTop = $("#stickyThead").outerHeight(true)+;
-		// 	if (windowTop>stickyTheadTop){
-		// 		$("#LabelBoxSticky").show();
-		// 	}else{
-		// 		$("#LabelBoxSticky").hide();
-		// 	}
-		// });
-
-
-		/**
-		     * Create a constructor for sparklines that takes some sensible defaults and merges in the individual
-		     * chart options. This function is also available from the jQuery plugin as $(element).highcharts('SparkLine').
-		     */
-		    
+	$(document).ready(function() {		    
 		    
 		    Highcharts.SparkLine = function (a, b, c) {
 		        var hasRenderToArg = typeof a === 'string' || a.nodeName,

@@ -8,3 +8,12 @@
 .border-left{
     border-left: 1px solid #ddd;
 }
+.border-left>h3{
+	font-size:1.4vw;
+}
+.border-left>span{
+	font-size:1vw;
+	line-height: 1.1!important;
+	display: inline;
+}
+

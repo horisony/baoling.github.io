@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="content-type"  content="text/html; charset=utf-8">  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Copatible" content="IE=edge">
+    <link href="http://gro.corp.ebay.com/gro/resources/css/bootstrap.min.css" rel="stylesheet" /> 
+    <style>
+	    .body{
+	    	margin:0;
+	    }
+	    .box{
+	    	width:20%;
+	    	height:160px;
+	    	padding:20px 12px;
+	    	/*background: grey;*/
+	    	margin: 20px 0 0 20px;
+	    	border:1px solid #ddd;
+	    }
+	    .legend_one{
+	    	width:100%;
+	    	height:50%;
+	    	display: flex;
+	    	display: -webkit-flex;
+	    	align-items:center;
+	    	-webkit-align-items:center;
+	    }
+	    .legend_txt_box{
+	    	width:36%;
+	    	height: 50%;
+	    	/*background: yellow;*/
+	    	padding-right:4px;
+	    	float:left;
+	    	text-align: right;
+	    	display: flex;
+	    	display: -webkit-flex;
+	    	align-items:center;
+	    	-webkit-align-items:center;
+	    	justify-content: flex-end;
+	    	-webkit-justify-content: flex-end;
+
+	    }
+	    .legend_txt_box>span{
+	    	text-align: right;
+	    	font-size:0.9em;
+	    }
+	    .barbox{
+	    	width:64%;
+	    	height:50%;
+	    	padding-left:4px;
+	    	/*background: blue;*/
+	    	float:left;
+	    	display: flex;
+	    	display: -webkit-flex;
+	    	align-items:center;
+	    	-webkit-align-items:center;
+	    }
+	    .barchart{
+	    	height:20px;
+	    	width:90%;
+	    	
+	    }
+	    .barchart_item{
+	    	width:10%;
+	    	height:20px;
+	    	border:1px solid white;
+	    	float:left;
+	    	background:#eee;
+	    }
+	    .barchart_highlight_auction{
+	    	background: #5190cc;
+	    }
+	    .barchart_highlight_fixprice{
+	    	background: #9cc8f2;
+	    }
+	    .legend_one:hover span{
+	    	text-decoration: underline;
+	    	color:#337ab7;
+	    }
+	    .legend_one:hover .barchart_highlight_auction{
+	    	background: #377bbc;
+	    }
+	    .legend_one:hover .barchart_highlight_fixprice{
+	    	background: #7cb5ec;
+	    } 
+	
+    </style>
+</head>
+<body>
+	<div class="box">
+		<a href="">
+		<div class="legend_one">
+			<div class="legend_txt_box">
+				<span>Auction</span>
+			</div>
+		
+			<div class="barbox">
+				<div class="barchart">
+					<div class="barchart_item barchart_highlight_auction"></div>
+					<div class="barchart_item barchart_highlight_auction"></div>
+					<div class="barchart_item barchart_highlight_auction"></div>
+					<div class="barchart_item barchart_highlight_auction"></div>
+					<div class="barchart_item barchart_highlight_auction"></div>
+					<div class="barchart_item barchart_highlight_auction"></div>
+					<div class="barchart_item"></div>
+					<div class="barchart_item"></div>
+					<div class="barchart_item"></div>
+					<div class="barchart_item"></div>
+				</div>
+			</div>
+		</div>
+		</a>
+		<a href="">
+		<div class="legend_one">	
+			<div class="legend_txt_box">
+				<span>Fixed Price</span>
+			</div>
+
+			<div class="barbox">
+				<div class="barchart">
+					<div class="barchart_item barchart_highlight_fixprice"></div>
+					<div class="barchart_item barchart_highlight_fixprice"></div>
+					<div class="barchart_item barchart_highlight_fixprice"></div>
+					<div class="barchart_item barchart_highlight_fixprice"></div>
+					<div class="barchart_item"></div>
+					<div class="barchart_item"></div>
+					<div class="barchart_item"></div>
+					<div class="barchart_item"></div>
+					<div class="barchart_item"></div>
+					<div class="barchart_item"></div>
+				</div>
+			</div>
+		</div>			
+		</a>
+	</div>
+</body>
+
+</html>
