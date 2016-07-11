@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/UnityPlayerNativeActivity"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/AndrewActivity"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bearActivity"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dress3dActivity"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dressActivity"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/hatActivity"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/necklaceActivity"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/pigActivity"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/sheepActivity"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/walleActivity"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- <style name="UnityThemeSelector" parent="Theme.AppCompat.NoActionBar">
+</style> -->
+<style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+       <!-- <style name="AppBaseTheme" parent="Theme.AppCompat.Light"> -->
+      <item name="android:colorPrimary">@color/blue_theme</item>
+      <item name="android:colorPrimaryDark">@color/blue_theme_darker</item>
+      <item name="android:colorAccent">@color/blue_theme</item>
+      <item name="android:textColorPrimary">@color/white</item>
+  </style>
+  <style name="AppTheme" parent="AppBaseTheme"></style>
+  <style name="UnityThemeSelector" parent="android:Theme.Material.Light.NoActionBar.Fullscreen">
+</style>
+</resources>
